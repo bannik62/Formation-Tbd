@@ -15,16 +15,25 @@
   </head>
   <body>
     <a href="http:www.google.com">
-         <input class="blocktest" type="button" value="google" class="center" />
-     </a>
+      <input class="blocktest" type="button" value="google" class="center" />
+    </a>
     <br />
     <input type="checkbox" name="cocher" id="test" onclick=" " />
-    <form action="index.html">
-        <br />
-        
+    <form action="index.html" class="hh">
+      <br />
+
       Nom : <input type="text" name="nom" id="nom" /> <br />
       Prenom : <input type="text" name="prenom" id="prenom" /> <br />
       <input type="submit" name="Valider" id="Valider" value="Valider" />
+      <form action="" method="get">
+        <label for="cars">Choose a car:</label>
+        <select id="cars" name="cars" size="4" multiple>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+      </form>
     </form>
   </body>
 </html>
