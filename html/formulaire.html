@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="formation cours htlm " />
     <meta name="description" content="centre de formation calaisien" />
     <link
@@ -12,34 +12,40 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <title>formulaire</title>
-</head>
-<body>
-    <form action="/action_page.php" method="get"> 
+  </head>
+  <body>
+    <form action="/action_page.php" method="get">
+      <label for="cars">Choose a car:</label>
+      <select id="cars" name="cars" onchange="location = this.value ">
+        <option value="">Veuillez choisir</option>
+        <option value="https://www.volvo.com/en/">volvo</option>
+        <option value="https://www.saab.com">Saab</option>
+        <option value="https://www.fiat.com">Fiat</option>
+        <option value="https://audi.com">Audi</option>
+      </select>
     </form>
-    <label for="cars">Choose a car:</label>
-<select id="cars" name="cars">
-<option value="volvo">volvo</option><a href="slide.html"> </a></option>
-<option value="saab">Saab</option>
-<option value="fiat">Fiat</option>
-<option value="audi">Audi</option>
-</select>
+    <br />
 
-<br />
+    <h2 class="h2 center">Affichage de texte avec PHP</h2>
 
-<h2 class="h2 center">Affichage de texte avec PHP</h2>
-        
-<p  >
-    Cette ligne a été écrite entièrement en HTML.<br />
-    <?php echo("Celle-ci a été écrite entièrement en PHP."); ?>
-</p>
-<br />
-<select name="formation" onchange="location = this.value;">
-    <option value="slide.html">slide</option>
-    <option value="bloquote.html">bloquote</option>
-    <option value="index.html">acceuille</option>
-   </select>
-    
-</body>
+    <p>
+      Cette ligne a été écrite entièrement en HTML.<br />
+      <?php echo("Celle-ci a été écrite entièrement en PHP."); ?>
+    </p>
+    <br />
+    <form action="">
+      <select name="formation" onchange="location = this.value;">
+        <option value="slide.html">slide</option>
+        <option value="bloquote.html">bloquote</option>
+      </select>
+    </form>
+
+    <form action="index.html" class="hh center">
+      Nom : <input type="text" name="nom" id="nom" /> <br />
+      Prenom : <input type="text" name="prenom" id="prenom" /> <br />
+      <input type="submit" name="Valider" id="Valider" value="Valider" />
+    </form>
+  </body>
 </html>

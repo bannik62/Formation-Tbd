@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
 
-h1 {
+h1 h2 h3 h4 {
   color: rgb(58, 211, 119);
   text-align: center;
 }
@@ -10,16 +10,16 @@ h1 {
 p {
   font-family: verdana;
   font-size: 20px;
-  color: white ;
+  color: white;
 }
 
 a {
   color: rgb(53, 35, 170);
 }
 
-h2 {
+h2 label {
   color: rgb(248, 233, 244);
-  text-align: center
+  text-align: center;
 }
 
 .tableau {
@@ -29,18 +29,24 @@ h2 {
   vertical-align: middle;
 }
 
-.hh {
+.hh form {
   color: rgb(240, 248, 249);
   float: none;
- 
 }
 
 .center {
   text-align: center;
-  margin-right: auto ;margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-address {color: white;
-         font-size: 1cm; 
+address {
+  color: white;
+  font-size: 1cm;
+}
 
+P.blocktext {
+  margin-left: auto;
+  margin-right: auto;
+  width: 6em
 }
