@@ -16,36 +16,83 @@
     <title>formulaire</title>
   </head>
   <body>
-    <form action="/action_page.php" method="get">
+    <div><form action="/action_page.php" method="get" >
       <label for="cars">Choose a car:</label>
-      <select id="cars" name="cars" onchange="location = this.value ">
-        <option value="">Veuillez choisir</option>
+      <select id="cars" name="cars" onchange="location=this.value"  >
+        <option>Veuillez choisir</option>
         <option value="https://www.volvo.com/en/">volvo</option>
         <option value="https://www.saab.com">Saab</option>
         <option value="https://www.fiat.com">Fiat</option>
         <option value="https://audi.com">Audi</option>
       </select>
     </form>
+  </div>
     <br />
 
     <h2 class="h2 center">Affichage de texte avec PHP</h2>
 
-    <p class="hh center">
-      Cette ligne a été écrite entièrement en HTML.<br />
-      <?php echo("Celle-ci a été écrite entièrement en PHP."); ?>
-    </p>
+
     <br />
-    <form action="">
-      <select name="formation" onchange="location = this.value;" value"choisir">
+    <div >
+    <form action="get" >
+      <select name="formation" onchange="location=this.value;" onload=value"Veuillez choisir" >
+        <option value="Veuillez choisir">choisir</option>
         <option value="slide.html">slide</option>
         <option value="bloquote.html">bloquote</option>
         <option value="inputs.html">inputs</option></select>
     </form>
-
-    <form action="index.html" class="hh center" >
-      Nom : <input type="text" name="nom" id="nom" value="ton nom" /> <br />
-      Prenom : <input type="text" name="prenom" id="prenom" /> <br />
-      <input type="submit" name="Valider" id="Valider" value="Valider" />
+    <div class="div2">
+    <form action="index.html"  >
+      Nom : <input type="text" name="nom" id="nom" placeholder="ton nom" /> <br />
+      Prenom : <input type="text" name="prenom" id="prenom" placeholder="ton prenom" /> <br />
+      <input type="submit" name="Valider" id="Valider" value="Valider" > <br/>
     </form>
+    </div>  
+      <textarea name="message" rows="10" cols="30"></textarea> <br/>
+      
+    <form action="/action_page.php" method="post"  >
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John">
+        <br>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label>
+        <input type="submit" value="Submit">
+        <input type="reset" value="reset">
+    </form>
+         <br/>
+    <form action="/action_page.php" method="get">
+        <label for="fname" ></label>
+        <input type="text" placeholder="texte" > <br/> 
+        <input type="tel" placeholder="telephone" ><br/>
+        <input type="email" placeholder="email" ><br/>
+         <select> <option value="">item</option></select>
+         <option value="calais">calais</option>
+         <option value="boulogne">boulogne</option>
+         <option value="lille">lille</option>
+         <option value="paris">paris</option>
+         <input type="date" placeholder="" ><br/>
+         <input type="number" placeholder="numero"  min="1" max="4" value="1 "><br/>
+        <label for="choix" >checkbox</label>
+        <input type="checkbox" name="choix"><br/>
+               <label for="choix" >checkbox</label>
+               <input type="checkbox" id="choix"><br/>
+        <input type="checkbox" name="choix"><br/>
+<label for="bb">ecrivez vos commentaires</label>
+        <textarea placeholder="blablabla" name="bb" value="nom" ></textarea><br/>
+        <input type="radio"> <br/>
+         <button type="submit" name="submit" id="nom">Envoyer ma demande</button>
+    </form>
+    </div>
+    <br><br><br><br>
   </body>
 </html>

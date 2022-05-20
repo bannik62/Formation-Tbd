@@ -37,7 +37,7 @@ h2 label {
 .center {
   text-align: center;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 10cm;
 }
 
 address {
@@ -48,5 +48,15 @@ address {
 P.blocktext {
   margin-left: auto;
   margin-right: auto;
-  width: 6em
+  width: 6em;
+}
+
+title {
+  color: darkturquoise;
+}
+div {
+  float: right;
+}
+.div2 {
+  border-left:  left;
 }
