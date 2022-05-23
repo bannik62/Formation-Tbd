@@ -1,20 +1,19 @@
 body {
-  background-color: black;
+  background-color: rgb(145, 74, 74);
 }
-
-h1 h2 h3 h4 {
+ h2 h3 h4 {
   color: rgb(58, 211, 119);
   text-align: center;
 }
 
-p {
+p  {
   font-family: verdana;
   font-size: 20px;
   color: white;
 }
 
 a {
-  color: rgb(53, 35, 170);
+  color: rgb(243, 243, 246);
 }
 
 h2 label {
@@ -24,14 +23,16 @@ h2 label {
 
 .tableau {
   color: rgb(246, 236, 236);
-  border: 2px solid blueviolet;
-  background-color: rgb(214, 14, 14);
+ 
+  background-color: rgb(14, 13, 13);
   vertical-align: middle;
+  border-radius: 0.5cm;
 }
 
-.hh form {
+ form {
   color: rgb(240, 248, 249);
   float: none;
+  
 }
 
 .center {
@@ -48,7 +49,7 @@ address {
 P.blocktext {
   margin-left: auto;
   margin-right: auto;
-  width: 6em;
+  width:0cm
 }
 
 title {
