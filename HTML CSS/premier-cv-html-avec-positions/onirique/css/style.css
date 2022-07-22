@@ -1,0 +1,163 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+body{
+    background-image:url(../img/nebuleusewallpaper.jpeg);
+    background-size: 100%;
+    margin: 0;
+    background-repeat:none;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+   
+      
+}
+/*shadow sur le titre */
+h1 
+{
+    color: rgb(86, 1, 182);
+    font-size: 249%;
+    text-align: center;
+    flex: auto;
+    text-shadow: 5px -5px 0.25px rgb(255 153 10);
+    letter-spacing: 5px;
+    border: solid 100px,50px,100px,500px rgb(204, 9, 9);
+    font-family: Orbitron, sans-serif;
+    border: solid 3px orange;
+    top: -9px;
+    position: absolute;
+    left: 24%;
+}
+/*lien placement flexbox
+https://www.youtube.com/watch?v=jGtp9KjSO2c*/
+
+.conteneur {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+    border: solid 4px #301040;
+    width: 100%;
+    height: 120vh;
+    text-align: center;
+    margin:0;
+}
+
+.enfant1 {
+    z-index: 2;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border: solid 0px rgb(0, 0, 0);
+    width: 21.3%;
+    height: 100%;
+    top: 0%;
+    background-color: rgb(3, 0, 46);
+    /* color: red; */
+}
+
+.enfant2 {
+    position: sticky;
+    border: solid 0px rgb(0, 0, 0);
+    width: 78.75%;
+    height: 20%;
+    top: -3px;
+    left: 25.25%;
+    background-image: url(../img/etoile.jpg);
+    z-index: 0;
+}
+
+.enfant3{
+        color:white;
+        background-size: 100%;
+        position: sticky;
+        border: solid 0px rgb(0, 0, 0);
+        width: 106.75%;
+        height: 15%;
+        top: 82.5%;
+        left: 16.25%;
+        background-image: url(../img/coucherdetoile.jpeg);
+        background-position-x: 27%;
+        background-position-y: 81%;
+        opacity: 0.5;
+        z-index: 2;
+}
+
+.enfant4 {
+    margin-right: 5%;
+    position: absolute;
+    border: solid 0px rgb(0, 0, 0);
+    width: 85.7%;
+    height: 60%;
+    top: 19.6%;
+    left: 21.3%;
+    flex: auto;
+    z-index: 1;
+}
+
+
+
+div {
+
+}
+
+.ifra{
+   
+    width: 90%;
+    height: 110%;
+    
+
+
+}
+
+/* menu deroulant 
+https://www.hostinger.fr/tutoriels/menu-deroulant-css
+*/
+
+.menuprincipal {
+    font-family: Orbitron, sans-serif;
+    background-color: #30104024;
+    color: rgb(176, 185, 242);
+      cursor: pointer;
+    padding: 22px;
+    margin-top: 0%;
+    font-size: 30px;
+    position: fixed;
+    left: 0%;
+    height: 25.5%;
+    top: 0%;
+    border-top: 0%;
+    width: 21.6%;
+    }
+    .menuprincipal:hover {
+    background-color: #300df7;
+    }
+    .dropdown {
+    position: relative;
+    top: 4%;
+    display: inline-block;
+    }
+    .dropdown-child {
+    display: none;
+    background-color: #270c3654;
+    min-width: 50px;
+    position: relative;
+    top: -11%;
+    left: 1%;
+    border-radius: 30px;
+    }
+    .dropdown-child a {
+    color: rgb(180, 164, 238);
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    }
+    .dropdown:hover .dropdown-child {
+    display: block;
+    
+ }
+ .div1{
+     border: solid 1px whitesmoke;
+     border-radius: 25%;
+      background-color:aqua  
+ }

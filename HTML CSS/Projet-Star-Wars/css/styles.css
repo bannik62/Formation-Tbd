@@ -1,0 +1,462 @@
+/* css parent */
+@font-face {
+  font-family: "Moonhouse";
+  src: url("fonts/Moonhouse-yE5M.ttf") format("truetype");
+}
+
+body {
+  /* reset */
+  padding: 0 !important;
+  margin: 0 !important;
+  /* end reset */
+
+  background-image: url(../images/background/starrysky.jpg);
+  font-family: Moonhouse;
+  color: white;
+}
+
+main {
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #b98f3d;
+}
+
+h1 {
+  text-align: center;
+  color: #efa23a;
+}
+
+iframe:not(.trailer > iframe) {
+  width: 100%;
+  height: 5rem;
+}
+
+.container {
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+}
+
+
+/* index corpo & planetes */
+.title {
+  color: #efa23a;
+  text-align: center;
+}
+
+.card {
+  text-align: center;
+  box-shadow: 0px 0px 10px #efa23a;
+  border: solid 3px #efa23a;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 20%;
+}
+
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: space-around;
+}
+
+.card img {
+  width: 100%;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+@media (max-width: 700px) {
+  .card {
+    padding: 1rem;
+    text-align: center;
+    width: 30%;
+  }
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: transform 400ms ease-in-out;
+}
+
+/* personnage & corpo & planetes */
+.presentation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.histoire {
+  margin: 1%;
+}
+
+.presentoir {
+  width: 100%;
+  margin: 1%;
+}
+
+.presentoir img {
+  width: 50%;
+}
+
+.geonosis img,
+.utapau img {
+  margin-top: 23%;
+  margin-bottom: 23%;
+}
+
+@media (max-width: 700px) {
+  .presentation {
+    flex-wrap: wrap;
+  }
+}
+
+.relations > img {
+  float: left;
+  width: 15%;
+}
+
+/* movies */
+.movie {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.poster {
+  display: inline-block;
+  width: 35%;
+  text-align: center;
+}
+
+.poster h1 {
+  text-align: center;
+}
+
+.poster img {
+  width: 100%;
+}
+
+.synopsis {
+  display: inline-block;
+  width: 45%;
+  text-align: justify;
+}
+
+.synopsis h2 {
+  text-align: center;
+}
+
+.trailer {
+  padding-bottom: 10%;
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.integration {
+  width: 1000px;
+  height: 650px;
+}
+
+@media screen and (max-width: 912px) {
+  .movie {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .poster {
+    width: 100%;
+  }
+
+  .synopsis {
+    width: 98%;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .synopsis {
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .synopsis {
+    width: 55%;
+    margin-left: 10%;
+  }
+}
+
+/* inscription */
+.inscrire {
+  display: flex;
+  color: #b98f3d;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 450px;
+  border: solid 1px #b98f3d;
+  border-radius: 5px;
+  background-color: black;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+
+h4 {
+  color: #b98f3d;
+
+  text-align: center;
+}
+
+
+#compte {
+  margin: 5px;
+}
+
+#password {
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+}
+
+#oubli_cache {
+  text-decoration: none;
+}
+
+#inscription {
+  border: solid 2px #b98f3d;
+  border-radius: 2px;
+  color: #b98f3d;
+  background-color: black;
+}
+
+
+/* connexion */
+.connect {
+  display: flex;
+  color: #b98f3d;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 300px;
+  border: solid 1px #b98f3d;
+  border-radius: 5px;
+  background-color: black;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+#logging {
+  margin: 5px;
+}
+
+#user {
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+}
+
+#infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#oubli {
+  text-align: right;
+  display: flex;
+  justify-content: space-around;
+}
+
+#envoyer {
+  border: solid 2px #b98f3d;
+  border-radius: 2px;
+  color: #b98f3d;
+  background-color: black;
+}
+
+#boutton {
+  border: solid 2px #b98f3d;
+  border-radius: 2px;
+  color: #b98f3d;
+  background-color: black;
+}
+
+/* contact */
+
+.contact {
+  color: #b98f3d;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 300px;
+  border: solid 1px #b98f3d;
+  border-radius: 5px;
+  background-color: black;
+}
+
+#contacts {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+#infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#envoyer {
+  border: solid 2px #b98f3d;
+  border-radius: 2px;
+  color: #b98f3d;
+  background-color: black;
+}
+
+#reset {
+  border: solid 2px #b98f3d;
+  border-radius: 2px;
+  color: #b98f3d;
+  background-color: black;
+}
+
+#remarques {
+  resize: none;
+}
+
+/* index perso */
+
+.personnages {
+  color: white;
+  background-color: black;
+  background-size: cover;
+}
+
+.list1 {
+	display: flex;
+	align-content: space-between;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.card1 {
+  margin-bottom: 25px;
+  box-shadow: 0px 0px 10px #efa23a;
+  background-color: #ffffff6b;
+  border-radius: 7px;
+  padding-left: 3%;
+
+  border: solid 3px #efa23a;
+  height: 160px;
+  width: 120px;
+  padding: 3%;
+  text-align: center;
+}
+
+.card1:hover {
+  box-shadow: 5px 0px 10px #efa23a;
+  transform: scale(1.5);
+  width: 150px;
+  background-color: rgba(255, 217, 0, 0.228);
+  transition: transform 400ms ease-in-out;
+}
+
+.robot {
+  width: 150px;
+  height: 150px;
+  margin-left: 44%;
+  margin-top: 6%;
+}
+
+/* index film */
+.accueil {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5% 0% 10% 0%;
+}
+
+.left1 > a,
+.center > a,
+.right1 > a {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.lien:hover {
+  border: 2px solid #b98f3d;
+}
+
+.lien > p,
+h1 {
+  color: #b98f3d;
+}
+
+.lien > img {
+  width: 85%;
+  /* height: 85%; */
+}
+
+.indexfilm {
+  max-width: 75%;
+  margin-left: 1%;
+}
+
+.bien:hover {
+  background-image: url(../images/background/force.gif);
+  background-repeat: round;
+}
+
+.mal:hover {
+  background-image: url(../images/background/effet.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*resize obiwan*/
+.img {
+  height: 100px;
+  width: 80px;
+}
+
+.right {
+  float: right;
+  width: 30px;
+}
+
+.left {
+  float: left;
+  width: 30px;
+}

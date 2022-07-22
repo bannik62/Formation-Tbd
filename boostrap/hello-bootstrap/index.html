@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Découverte de Bootstrap</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="bg-warning">Découverte de Bootstrap</h1>
+        <br>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">secondary</button>
+        <button type="button" class="btn btn-success">success</button>
+        <button type="button" class="btn btn-danger">danger</button>
+        <button type="button" class="btn btn-warning">warning</button>
+        <button type="button" class="btn btn-info ">info</button>
+        <button type="button" class="btn btn-light">light</button>
+        <button type="button" class="btn btn-dark">dark</button>
+        <br>
+
+
+
+
+    </div>
+    <h2>exercisse 1</h2>
+
+
+
+    <div class="col-8 bg-secondary ">Colonne 8</div>
+    <div class="col-4 bg-secondary ">Colonne 4</div>
+
+    <div class="col-8 bg-secondary ">
+        <div class="  col-3 ,col-lg-5"> sous row3</div>
+        <div class="  col-6">sous row 6</div>
+        <div class="  col-6">sous row 6</div>
+    </div>
+
+
+
+
+    <br>
+    <h2>exercisse 2</h2>
+    <div class="container-fluid ">
+        <div class="row">
+            <div class=" col-12">col 12</div>
+        </div>
+        <div class="row">
+            <div class=" col-6">col 12</div>
+            <div class=" col-6">col 12</div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-4">col 4</div>
+            <div class="col-4">col 4 </div>
+            <div class="col-4">col 4 </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-3">col 3</div>
+            <div class="col-3">col 3 </div>
+            <div class="col-3">col 3 </div>
+            <div class="col-3">col 3 </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2">col 2</div>
+            <div class="col-2">col 2 </div>
+            <div class="col-2">col 2 </div>
+            <div class="col-2">col 2 </div>
+            <div class="col-2">col 2 </div>
+            <div class="col-2">col2 </div>
+        </div>
+
+        <h2>exercisse 3</h2>
+        <br>
+
+
+        <div class="container">
+            <div class="row ">
+                <div class="col-12 ">entete </div>
+
+                <div class="  col-md-2 ,col-sm-12  ">menu </div>
+
+                <div class=" col-md-10 ,col-sm-12">col 12</div>
+
+                <div class=" col-12">pied de page </div>
+
+            </div>
+        </div>
+
+        <h2>exercisse 4</h2>
+
+
+
+        <div class="container">
+            <div class="row ">
+
+
+                <div class="  col-lg-6 ,col-sm-12  ">menu </div>
+
+                <div class=" col-sm-12, offset-lg-2 ,col-lg-9">col 12</div>
+
+                <div class=" col-12">pied de page </div>
+
+            </div>
+        </div>
+
+
+        <h2>exercisse 5</h2>
+
+        <div class="container-fluid">
+            <div class="col-12 col-lg-12 ">entete </div>
+            <div class="col-8 col-lg-12">entete </div>
+            <div class="col-4 col-lg-12">entete </div>
+            <div class="col-6 col-lg-12">entete </div>
+            <div class="col-3 col-lg-12">entete </div>
+            <div class="col-5 col-lg-12 ">entete </div>
+            <div class="col-4 col-lg-12">entete </div>
+        </div>
+
+
+        <h2>exo couleur </h2>
+
+        <section class="container">
+            <div class="row">
+                <div class="order-first col-12 bg-warning ">header jaune</div>
+                <div class="order-1 order-md-1 col-12 col-md-2 bg-info">col2 bleu</div>
+
+                <div class="order-2 col-12 col-md-3">
+                    <div class=" row">
+                        <div class="col-4 col-md-12 bg-success">col12 vert</div>
+                        <div class="col-4 col-md-12 bg-danger ">col12 red</div>
+                        <div class="col-4 col-md-12 bg-dark ">col12 black</div>
+                    </div>
+                </div>
+
+                <div class="order-last col-12 bg-warning ">footer jaune</div>
+
+
+            </div>
+        </section>
+
+        <br>
+        <section class="container">
+
+            <div class="row">
+                <div class="order-first col-12 bg-danger"> col12</div>
+                <div class="order-1   col-md-12 col-7 bg-danger"> col12/7</div>
+
+                <div class="row align-items-center">
+                    <div class="order-2 col-9  col-md-7 bg-info">col 9/7</div>
+                    <div class="col-7  col-md-9 bg-warning">col 9/7</div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <br>
+
+            <br>
+
+            <br>
+
+
+
+        </section>
+
+
+
+
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+
+    </div>
+</body>
+
+</html>

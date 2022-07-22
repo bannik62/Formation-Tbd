@@ -1,0 +1,44 @@
+.img1 {
+    width: 70px;
+    transition: transform .1s;
+}
+
+.img1:hover {
+  transform: scale(1.5);
+}
+
+h2 {
+    font-family: Hurricane;
+}
+
+.font {
+    font-family: Inter;
+}
+
+.titre {
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.position {
+    position: relative;
+}
+
+.move {
+    left: 38%;
+    top: 0%;
+}
+
+.img1 {
+    width: 70px;
+    transition: transform .1s;
+}
+
+.img1:hover {
+  transform: scale(1.5);
+}
+.vert
+{
+    background-color: lightgreen;
+}

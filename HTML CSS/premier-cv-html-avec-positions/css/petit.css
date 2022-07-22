@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+
+body{
+    
+    height: 100vh;
+    width: 96vw;
+background: url(../img/metal.jpg) ;
+  
+}
+
+.body2{
+    background: url(../img/lettre.jpg);
+   
+}
+.no {
+    padding:0%;
+    border:0%;
+}
+.h12{
+    /* color: rgb(16, 16, 16); */
+    font: size 10px;
+    position: absolute;
+    top: 2%;
+}
+h1{
+    padding-left: 0%;
+    top: -5%;
+    color: antiquewhite;
+    border: solid;
+    font-size: 2.9rem;
+    left: 86%;
+    position: absolute;
+    text-align: center;
+    font-family: Orbitron, sans-serif;
+    border: solid 9px #698487;
+    border-radius: 20px;
+}
+.move{position:absolute;
+top:0%;
+left:0%;}
+.font{
+    letter-spacing: 6px;
+    color: #0868ac;
+    font-size: 1.5rem;
+    }
+
+.conteneure{
+    display: flex;
+    border: 0px solid black;
+}
+
+
+.une {
+    top: 10%;
+    width: 84%;
+    height: 23%;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: 10px;
+    background: #595b5a;
+    position: absolute;
+    left: 83%;
+    padding-left: 34px;
+    border-radius: 30px;
+    }
+
+    .deuxe{
+        width: 88%;
+        height: 58%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        background: white;
+        position: absolute;
+        left: 347px;
+        top: 558px;
+        background-image: url(../img/fibre.jpg);
+        background: no-repeat;
+        z-index: 1;
+        opacity: 0.9;
+    }
+
+    .troise{
+        width: 25%;
+        height: 149%;
+        display: flex;
+        align-items: center;
+        margin: 10px;
+        background: rgb(189 193 198);
+        position: absolute;
+        left: 84%;
+        top: 33%;
+        flex-direction: column;
+        background-image: url(../img/circuit.webp);
+        color: black;
+        padding-right: 33px;
+        border-radius: 30px;
+        border: 10px solid #698487;
+        padding-left: 45px;
+        }
+
+    .footere{
+         
+        width: 191%;
+        height: 165PX;
+        margin: 7px;
+        background: url(../img/35a92fd622_50166485_code-binaire.jpg);
+        position: relative;
+        left: -6%;
+        justify-content: flex-start;
+        flex-direction: row;
+        opacity: 0.7;
+        top: 182%;}
+    
+/*https://www.hostinger.fr/tutoriels/menu-deroulant-css
+*/
+
+.menuprincipale {
+    background-repeat-y: no-repeat;
+    background-position-x: center;
+    font-family: Orbitron, sans-serif;
+    background-image: url(../img/binaire.png);
+    color: rgb(68 69 78);
+    border: none;
+    cursor: pointer;
+    padding: 22px;
+    margin-top: 2px;
+    font-size: 31px;
+    background-color: #ff00006e;
+    border: solid 3px black;
+    border-radius: 30px;
+    top: 34%;
+    left: -74%;
+    }
+    .menuprincipale:hover {
+    background-color: #03406f;
+    }
+    .dropdowne {
+        left: -3%;
+        top: 0.7%;
+        width: 69%;
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-childe {
+    display: none;
+    background-color: #698487;
+    min-width: 53px;
+    top: 86%;
+    left: -38%;
+    position: absolute;
+    border: 6px solid #7dcdf7;
+    }
+    .dropdown-childe a {
+    color: rgb(180, 164, 238);
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    }
+    .dropdowne:hover .dropdown-childe {
+    display: block;
+    
+ }
+
+/* menu deroulant 
+https://www.hostinger.fr/tutoriels/menu-deroulant-css
+*/
+ 
+.menuprincipale {
+    left: -111%;
+    top: -4%;
+    background-position-x: center;
+    font-family: Orbitron, sans-serif;
+    /* background-image: url(../img/binaire.jpg); */
+    color: rgb(162 219 247);
+    border: solid 4px #698487;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 22px;
+    margin-top: 2px;
+    font-size: 30px;
+    background-color: #ff00006e;
+    }
+    .menuprincipale:hover {
+    background-color: #300df7;
+    }
+    .dropdowne {
+    top: -1%;
+    border: 4px solid rgb(105 132 135);
+    position: relative;
+    display: inline-block;
+    left: -4%;
+    }
+    .dropdowne-childe {
+    display: none;
+    background-color: #242bfc;
+    min-width: 50px;
+    }
+    .dropdowne-childe a {
+    color: rgb(180, 164, 238);
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    }
+    .dropdowne:hover .dropdown-childe {
+    /* display: block; */
+ }
+ .div1{
+     border: solid 1px whitesmoke;
+     border-radius: 25%;
+      background-color:aqua  }

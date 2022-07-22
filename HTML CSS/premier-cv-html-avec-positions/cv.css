@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+
+body{
+    
+    height: 100vh;
+    width: 96vw;
+background: url(img/metal.jpg) ;
+  
+}
+
+.body2{
+    background: url(img/lettre.jpg);
+   box-shadow: 3px 3px #544e4e, -1em 0 0.4em rgb(86 102 118);
+}
+.no {
+    padding:0%;
+    border:0%;
+}
+.h12{
+    color: rgb(16, 16, 16);
+    font: size 10px ;
+ 
+
+    
+}
+h1{
+    padding-left: 20%;
+    top: 0%;
+    color: rgb(16, 16, 16);
+    border: solid;
+    font-size: 5rem;
+    left: 17%;
+    position: absolute;
+    text-align: center;
+    font-family: Orbitron, sans-serif;
+    border: thick double #32a1ce;
+    border-radius: 20px;
+    background-image: url(img/pngegg.png);
+}
+
+.etincelle{position:relative;
+top:0%;
+left:0%;}
+.font{
+    letter-spacing: 10px;
+    color: #0868ac;
+    font-size: 2rem;
+    }
+
+.conteneur{
+    display: flex;
+    border: 0px solid black;
+}
+
+
+.un {
+    opacity: 0.7;
+    width: 83%;
+    height: 21%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background: #595b5a;
+    position: absolute;
+    left: 25%;
+    top: 23%;
+    }
+
+    .deux{
+        width: 71%;
+        height: 106%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        background: white;
+        position: absolute;
+        left: 467px;
+        top: 227px;
+        background-image: url(img/fibre.jpg);
+        background: no-repeat;
+    }
+
+    .trois{
+        width: 22%;
+        height: 108%;
+        display: flex;
+        align-items: center;
+        margin: 10px;
+        background: rgb(189 193 198);
+        position: absolute;
+        left: 2%;
+        top: 22%;
+        flex-direction: column;
+        background-image: url(img/circuit.webp);
+        color: black;
+        padding-right: 33px;
+        border-radius: 30px;
+        border: 10px solid #698487;
+        padding-left: 45px;
+    }
+
+    .footer{
+        width: 113%;
+        height: 165PX;
+        margin: 7px;
+        background: url(img/35a92fd622_50166485_code-binaire.jpg);
+        position: relative;
+        left: -2%;
+        justify-content: flex-start;
+        flex-direction: row;
+        opacity: 1.7;
+        top: 128%;
+    }
+/*https://www.hostinger.fr/tutoriels/menu-deroulant-css
+*/
+
+.menuprincipal {
+    background-repeat-y: no-repeat;
+    background-position-x: center;
+    font-family: Orbitron, sans-serif;
+    background-image: url(img/binaire.png);
+    color: rgb(68 69 78);
+    border: none;
+    cursor: pointer;
+    padding: 22px;
+    margin-top: 2px;
+    font-size: 30px;
+    background-color: #ff00006e;
+    border-radius: 30px;
+    }
+    .menuprincipal:hover {
+    background-color: #300df7;
+    }
+    .dropdown {
+    left: -3%;
+    top: -4.3%;
+    width: 69%;
+    position: relative;
+    display: inline-block;
+    }
+    .dropdown-child {
+    display: none;
+    background-color: #242bfc;
+    min-width: 50px;
+    }
+    .dropdown-child a {
+    color: rgb(180, 164, 238);
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    }
+    .dropdown:hover .dropdown-child {
+    display: block;
+    
+ }
+ .div1{
+     border: solid 1px whitesmoke;
+     border-radius: 25%;
+      background-color:aqua  
+/* menu deroulant 
+https://www.hostinger.fr/tutoriels/menu-deroulant-css
+*/
+ }
+.menuprincipal {
+    font-family: Orbitron, sans-serif;
+    color: rgb(1 57 102);
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    margin-top: -1px;
+    font-size: 30px;
+    position: relative;
+    left: 0%;
+    }
+    .menuprincipal:hover {
+    background-color: #300df7;
+    }
+    .dropdown {
+    border: 4px solid rgb(105 132 135);
+    position: relative;
+    display: inline-block;
+    border-radius: 35px;
+    outline: dashed 1px white;
+    }
+    .dropdown-child {
+    display: none;
+    background-color: #85c9db70;
+    min-width: 50px;
+    border-radius: 6%;
+    background-image: ../img/pngegg.png;
+    }
+    .dropdown-child a {
+    color: rgb(1 57 102);
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 2rem;
+    border-radius: 62px;
+    }
+    .dropdown:hover .dropdown-child {
+    display: block;
+    
+ }
+ .div1{
+     border: solid 1px whitesmoke;
+     border-radius: 25%;
+      background-color:aqua  }

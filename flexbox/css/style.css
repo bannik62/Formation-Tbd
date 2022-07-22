@@ -1,0 +1,137 @@
+body {
+    background-color: red;
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        background: green;
+
+    }
+
+}
+
+@media screen and (min-height: 580px) {
+    body {
+        background: orange;
+
+    }
+
+}
+
+
+
+
+.conteneurflex {
+    width: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: solid 3px black;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.item {
+    background-size: cover;
+    width: 5rem;
+    height: 5rem;
+    border: solid 2px black;
+}
+ 
+.conteneurflex:hover {
+    width: 6rem;
+    height: 6rem;
+    background-color: pink;
+    background-color: red;
+    position: relative;
+  } 
+
+
+ 
+  
+
+
+
+
+.i1 {
+    background-color: lime;
+    background-image: url(../img/Capture.PNG);
+
+}
+
+.i2 {
+    background-color: purple;
+    background-image: url(../img/papier.PNG);
+}
+
+.i3 {
+    background-color: blue;
+    background-image: url(../img/pierre.PNG);
+
+}
+
+
+@media (max-width: 480px) {
+    .conteneurflex {
+        flex-direction: column-reverse;
+    }
+
+
+
+}
+
+
+
+
+.talign {
+    text-align: center;
+}
+
+
+
+
+
+
+
+.conteneurposition {
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px black;
+    width: 800px;
+    height: 800px;
+}
+
+
+.items11 {
+    border: solid 3px black;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    position: absolute
+}
+
+.items22 {
+    border: solid 3px black;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(208, 0, 255);
+    position: fixed;
+}
+
+.items33 {
+    border: solid 3px rgb(0, 0, 0);
+    width: 200px;
+    height: 200px;
+    background-color: rgb(229, 255, 0);
+    position: relative;
+    top: 150px;
+}
+
+.items44 {
+    border: solid 3px black;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(0, 255, 140);
+    position: sticky;
+
+}

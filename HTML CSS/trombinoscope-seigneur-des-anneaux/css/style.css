@@ -1,0 +1,417 @@
+.bak {
+    background-image: url(../img/mur.jpg);
+    background-position: bottom center;
+
+
+    background-size: cover;
+}
+
+@media only  screen and (min-width: 650px) {
+  
+        .ano {
+            z-index: 1;
+            background-image: url(../img/ano.gif);
+            top: -314px;
+            left: 260px;
+            position: relative;
+         }
+     }
+
+
+.bodyg {
+    background-image: url(../img/fgoolum.jpg);
+    background-position: bottom center;
+
+
+    background-size: cover;
+}
+
+.bodyle {
+    background-image: url(../img/Ithilien.webp);
+    background-position: bottom center;
+
+
+    background-size: cover;
+}
+
+.bodyfro {
+    background-image: url(../img/acchobbit.jpg);
+    background-position: bottom center;
+
+
+    background-size: cover;
+}
+
+.bodygim {
+    background-image: url(../img/s-l1600.jpg);
+    background-position: bottom center;
+
+
+    background-size: cover;
+}
+
+
+
+
+h1 {
+    letter-spacing: 1px;
+    color: #ead19c;
+    font-size: 4rem;
+    text-align: center;
+
+
+}
+
+.fontrenseigne {
+    font-family: 'Merienda', cursive, 'Rye', cursive;
+    font-size: 1rem;
+
+}
+
+.font {
+    font-family: 'Merienda', cursive, 'Rye', cursive;
+
+
+}
+
+.fonttitre {
+    text-decoration: underline rgb(167, 137, 137);
+    text-align: center;
+    font-family: 'Merienda', cursive, 'Rye', cursive;
+    font-size: 2rem;
+
+}
+
+.conteneurgo {
+    box-shadow: 5px 5px #ea3c3c69, -1em 0 0.4em #ff0a0a61;
+    border-radius: 30px;
+    background-image: url(../img/8fe7a4a4b589ee8aee3bb60a9f4337fc.webp);
+    display: flex;
+    margin-right:
+        auto;
+    margin-left: auto;
+    width: 500px;
+    height: 600px;
+    border: solid 3px black;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteneurleg {
+    box-shadow: 5px 5px #e9ee93, -1em 0 0.4em #e9ee9385;
+    border-radius: 30px;
+    background-image: url(../img/ithilien\ \(1\).webp);
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+    height: 600px;
+    border: solid 3px black;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteneurgand {
+    box-shadow: 5px 5px black, -1em 0 .4em grey;
+    border-radius: 30px;
+    background-image: url(../img/texture.jpg);
+    display: flex;
+    margin-right:
+        auto;
+    margin-left: auto;
+    width: 500px;
+    height: 600px;
+    border: solid 3px black;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteneurfro {
+    box-shadow: 5px 5px #51ff0454, -1em 0 0.4em #5fea756b;
+    border-radius: 30px;
+    background-image: url(../img/Comté_2.webp);
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+    height: 600px;
+    border: solid 3px black;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteneurgim {
+    box-shadow: 5px 5px #5a9764, -1em 0 0.4em #5a9764;
+    border-radius: 30px;
+    background-image: url(../img/Gimli-axes.webp);
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+    height: 600px;
+    border: solid 3px black;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.item1 {
+    height: 149px;
+    width: 470px;
+    border: solid 4px black;
+    margin: 31px;
+    background-color: #c1c1c194;
+    border-radius: 8px;
+
+}
+
+
+
+.sous1item1 {
+
+    border-radius: 15px;
+
+    position: relative;
+
+    top: 0%;
+
+    left: 0%;
+
+    padding: 0%;
+}
+
+.sous1item2 {
+    /* text-decoration: underline gray; */
+    font-size: 13px;
+    top: -98%;
+    left: 30%;
+    position: relative;
+    padding: 0%;
+}
+
+
+
+.item2 {
+    border-radius: 30px;
+    box-shadow: 5px 5px black, -1em 0 .4em grey;
+    background-image: url(../img/espace.jpg);
+    overflow: auto;
+    height: 280px;
+    width: 420px;
+    border: solid 2px black;
+}
+
+
+.sous2item1 {
+
+    color: white;
+
+    width: 411px;
+
+    height: 100px;
+
+    padding: 2px;
+}
+
+
+
+
+
+
+
+.item3 {
+    font-size: 12px;
+    border-radius: 15px;
+    margin-top: 39px;
+    color: white;
+    height: 112px;
+    width: 423px;
+    border: solid 2px black;
+    margin-bottom: 18px;
+    background-color: #00000059;
+    overflow: auto;
+}
+p, precieux::first-letter{
+    font-size: 15px;
+    color: white;
+    height: 0px;
+
+}
+p::first-letter {
+    font-size: 40px;
+    font-weight: bold;
+    color: gold;
+    font-family: Harrington, Zapfino;
+}
+
+.heading h1::first-letter {
+    color: gold;
+    font-weight: bold;
+    font-family: Harrington, Zapfino;
+}
+
+
+
+.acceuil {
+    background-attachment: fixed;
+    background-image: url("../img/lord.jpg");
+    background-size: cover;
+    height: 636px;
+}
+
+
+.acconteneur {
+    cursor: url(../img/lord_6.png), pointer;
+    position: relative;
+    top: 266px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: baseline;}
+
+
+
+.accitem1 {
+    background-size: contain;
+    background: url("../img/frodonacceuil.png");
+    border: solid 2px white;
+    width: 150px;
+    height: 150px;
+    transition:  transform 3s;
+}
+
+
+.accitem1:hover {
+    
+    transform: rotate(360deg) ;
+    background-size: contain;
+    background: url("../img/Sauron.jpeg");
+    border: solid 2px rgb(255, 255, 255);
+    width: 150px;
+    height: 150px;
+}
+
+.accitem2 {
+    background-size: contain;
+    background: url("../img/gimliacceuil.png");
+    width: 150px;
+    height: 150px;
+    border: solid 2px white;
+    transition:  transform 2s;
+}
+
+.accitem2:hover {
+    transform: rotate(360deg);
+    background-size: contain;
+    background: url("../img/Sauron.jpeg");
+    border: solid 2px rgb(255, 255, 255);
+    width: 150px;
+    height: 150px;
+}
+
+.accitem3 {
+    background-size: contain;
+    background: url("../img/téléchargementacceuil.jpg");
+
+    border: solid 2px white;
+    width: 150px;
+    height: 150px;
+    transition:  transform 2s;
+}
+
+.accitem3:hover {
+    transform: rotate(360deg);
+    background-size: contain;
+    background: url("../img/Sauron.jpeg");
+    border: solid 2px rgb(255, 255, 255);
+    width: 150px;
+    height: 150px;
+}
+
+.accitem4 {
+    background-size: contain;
+    background: url("../img/Legolasacc.png");
+    border: solid 2px white;
+    width: 150px;
+    height: 150px;
+    transition:  transform 2s;
+}
+
+.accitem4:hover {
+    transform: rotate(360deg);
+    background-size: contain;
+    background: url("../img/Sauron.jpeg");
+    border: solid 2px rgb(255, 255, 255);
+    width: 150px;
+    height: 150px;
+}
+
+.accitem5 {
+    background-size: contain;
+    background: url("../img/goolumacc.png");
+    border: solid 2px white;
+    width: 150px;
+    height: 150px;
+    transition:  transform 2s;
+}
+
+.accitem5:hover {
+    transform: rotate(360deg);
+    background: url("../img/Sauron.jpeg");
+    border: solid 2px rgb(255, 255, 255);
+    width: 150px;
+    height: 150px;
+}
+
+
+.retouracc {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+
+
+
+
+}
+
+.lord {
+    align-items: center;
+    background-size: contain;
+    position: relative;
+    top: 0%;
+    background-repeat: no-repeat;
+    left: 2%;
+    opacity: 2.8;
+    border: 0px;
+}
+
+.ano {
+
+z-index: 0;
+
+background-image: url(../img/ano.gif);
+
+position: fixed;
+
+top: 0%;
+
+left: 7%;
+
+transition: transform 3s;
+
+
+}
+
+.ano:hover{
+    transform:   scale(0.1) translate(-100%, -100% ) ;
+   
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+
+} 

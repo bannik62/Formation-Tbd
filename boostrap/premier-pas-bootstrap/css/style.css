@@ -1,0 +1,49 @@
+body {
+    background-image: url(../img/fond-texture-metallique-argente_53876-90845.webp);
+ 
+}
+
+.conteneur {
+    display: flex;
+}
+
+.box1 {
+    position: absolute;
+    top: 9%;
+    left: 0%;
+    width: 100%;
+}
+
+.box2 { position: absolute;
+    top: 18%;
+    right: 1%;
+   
+}
+
+.page {
+    position: absolute;
+    bottom: 5%;
+    left: 0%;
+}
+.menu{
+    position: absolute;
+    top: 19%;
+    left: 1%;
+    }
+    .card1
+    {
+        padding: 1%;
+        position: absolute;
+        top: 44%;
+        left: 0%;
+        background: rgb(165 164 169);
+        border-radius: 11%;
+        border: solid 9px #8080807d;
+    }
+
+    .formul1{
+         position: absolute;
+         top: 38%;
+         left: 76%;
+    }
+    

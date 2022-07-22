@@ -1,0 +1,257 @@
+body {
+    background-size: cover;
+    background-image: url(../img/texture.jpg);
+    background-repeat: center no-repeat  ;
+    font-family: 'Rye', cursive;
+}
+
+
+ 
+
+ 
+
+.bodyac {
+    background-image: url(../img/texture.jpg);
+    background-position: 51% -2%;
+
+}
+
+
+.boutonmenuprincipal {
+
+top: 0%;
+    left:0%;
+
+position: relative;
+
+background-color: #e83737;
+
+color: white;
+
+border: none;
+
+cursor: pointer;
+    padding:20px;
+    margin-top:20px;
+
+font-size: 30px;
+
+}
+    .boutonmenuprincipal:hover {
+    background-color: #ff4444;
+    }
+    .dropdown {
+        top: -45%;
+        left: 133%;
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-child {
+    background-color: #f28c8c;
+    min-width: 50px;
+    }
+    .dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    }
+    .dropdown:hover .dropdown-child {
+    display: block;
+    }
+
+.tour {
+    width: 391px;
+    top: 4%;
+    left: 17%;
+    border: 3px solid black;
+    position:
+    absolute;
+    height: 572px;
+    background-image: url(../img/parchemin.png);
+}
+
+.tourac {
+    width: 389px;
+    top: 2%;
+    left: 31%;
+    border: 3px solid black;
+    position:
+        absolute;
+    height: 572px;
+    background-image: url(../img/parchemin.png);
+}
+
+
+
+.div0 {
+
+background-size: contain;
+
+z-index: 1;
+
+position: fixed;
+
+top: 12%;
+
+left: 31%;
+}
+
+.div1 {
+    position: relative;
+    top: 89%;
+    z-index: 1;
+    right: -84%;
+}
+
+
+
+.div2 {
+    position: relative;
+    top: 27%;
+    left: 79%;
+    z-index: 1;
+}
+
+
+
+.div3 {
+    font-size: 237%;
+    position: fixed;
+    top: -5%;
+    left: 18%;
+    color: red;
+}
+
+
+.div4 {
+    z-index: 1;
+    position: fixed;
+    top: 37%;
+    left: 19%;
+    font-size: 73%;
+}
+
+
+
+.div5 {
+    position: fixed;
+    top: 59%;
+    left: 20%;
+    font-size: 76%;
+}
+
+
+
+.div6 {
+    width: 199%;
+    margin: -10px;
+    position: relative;
+    top: 46%;
+    left: 39%;
+}
+
+
+
+.div7 {
+    font-size: 65%;
+    position: fixed;
+    left: 19%;
+    top: 86%;
+}
+
+.li {
+   
+    width: 2%;
+}
+
+.diva0c {
+
+    width: 25%;
+
+    z-index: 1;
+
+    position: fixed;
+
+    top: 12%;
+
+    left: 46%;
+
+}
+
+.div1c {
+    position: relative;
+    top: 90%;
+    z-index: 1;
+    right: -86%;
+}
+
+
+
+.div2c {
+    position: relative;
+    top: 22%;
+    left: 80%;
+    z-index: 1;
+}
+
+
+
+.div3c {
+    font-size: 241%;
+    position: fixed;
+    top: -6%;
+    left: 32%;
+    color: red;
+}
+
+
+.div4c {
+    z-index: 1;
+    position: fixed;
+    top: 33%;
+    left: 32%;
+    font-size: 77%;
+}
+
+
+
+.div5c {
+    position: fixed;
+    top: 59%;
+    left: 32%;
+    font-size: 76%;
+}
+
+
+
+.div6c {
+    position: fixed;
+    top: 66%;
+    left: 58%;
+    width: 90%;
+}
+
+
+
+.div7c {
+    font-size: 66%;
+    position: fixed;
+    left: 32%;
+    top: 84%;
+}
+
+
+.divac1 {
+    color: red;
+    font-size: ;
+
+
+}
+
+.divac2 {
+    color: red;
+    font-size: ;
+
+
+}

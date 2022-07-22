@@ -1,0 +1,22 @@
+footer {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	margin: 0 20%;
+}
+.pied {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+.pied>a {
+	text-align: center;
+}
+.credit {
+	text-align: center;
+}
+@media screen and (max-width:770px) {
+	.pied {
+		flex-flow: column nowrap;
+	}
+}

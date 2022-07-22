@@ -1,0 +1,63 @@
+body {
+  background-color: rgb(145, 74, 74);
+}
+ h2 h3 h4 {
+  color: rgb(58, 211, 119);
+  text-align: center;
+}
+
+p  {
+  font-family: verdana;
+  font-size: 20px;
+  color: white;
+}
+
+a {
+  color: rgb(243, 243, 246);
+}
+
+h2 label {
+  color: rgb(248, 233, 244);
+  text-align: center;
+}
+
+.tableau {
+  color: rgb(246, 236, 236);
+ 
+  background-color: rgb(14, 13, 13);
+  vertical-align: middle;
+  border-radius: 0.5cm;
+}
+
+ form {
+  color: rgb(240, 248, 249);
+  float: none;
+  
+}
+
+.center {
+  text-align: center;
+  margin-right: auto;
+  margin-left: 10cm;
+}
+
+address {
+  color: white;
+  font-size: 1cm;
+}
+
+P.blocktext {
+  margin-left: auto;
+  margin-right: auto;
+  width:0cm
+}
+
+title {
+  color: darkturquoise;
+}
+div {
+  float: right;
+}
+.div2 {
+  border-left:  left;
+}

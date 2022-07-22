@@ -1,0 +1,54 @@
+[class*="col-"] {
+    background-color: #d4d4d400;
+    border: 2px solid #000000;
+    margin-top: 2px;
+    line-height: 50px;
+    text-align: center;
+}
+.row {
+    background-color: rgba(253, 255, 127, 0);
+}
+.container,
+.container-fluid {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+   
+}   
+
+.bg-pink{
+background-color: pink;
+
+}
+
+.bg-purple{
+    background-color: purple;
+}
+
+
+.taille1{
+   
+}
+.taille2{
+
+}
+.taille3{
+
+}
+.taille4{
+
+}
+
+span{ 
+    height: 400px;
+    width: 400px;
+    border: solid 1px;
+    display: inline-block;
+}
+
+
+.border-radius(@radius){
+    .border-top-radius(@radius);
+    .border-right-radius(@radius);
+    .border-bottom-radius(@radius);
+    .border-left-radius(@radius);
+}

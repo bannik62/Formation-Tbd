@@ -1,0 +1,1 @@
+la page planete.html n'est qu'un amalgame d'infos, qu'il faudrait réorganiser sur chacune des pages

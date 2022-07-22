@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <title>formulaire </title>
+</head>
+
+<body class="bg-pink">
+
+    <div class="container-fluid">
+        <br>
+        <!--nom et prenom  telephone -->
+        <section>
+            <h3>Formulaire</h3>
+            <form>
+                <div class="row">
+                    <div class="col-3">
+                        nom
+                        <input type="text" class="form-control align-top" placeholder="nom">
+                        Prénom
+                        <input type="text" class="form-control" placeholder="Prénom">
+                        <div class="row">
+                            <div class="col3"> <label class="control-label " for="tel">
+                                    Telephone #
+                                </label>
+                                <input class="form-control" id="tel" name="tel" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+        <br>
+        <hr>
+        <!--section bouton radio -->
+        <section>
+            <p>Indiquez votre sexe</p>
+            <div class="row">
+                <div class="col-3">
+                    </label>
+                    <div class="">
+                        <div class="radio">
+                            <label class="radio">
+                                <input name="radio" type="radio" value="homme" />
+                                homme
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label class="radio">
+                                <input name="radio" type="radio" value="femme" />
+                                femme
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+        <hr>
+        <br>
+        <section>
+            <!--section permis-->
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Vos permis </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Permis A</option>
+                            <option>Permis B</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--date de naissance-->
+        <section>
+            <div class="row">
+                <div class="col-3">
+                    <label class="control-label " for="date">
+                        Date
+                    </label>
+                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
+                </div>
+                <div class="form-group">
+                    <div>
+
+                    </div>
+                </div>
+
+        </section>
+        <!--section  email pawssword  -->
+        <section>
+            <form class="align-items-center">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">Veuillez mettre un email valide.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <br>
+                <button type="submit" class="btn btn-primary">envois</button>
+
+    </div>
+    </div>
+
+    </section>
+    </div>
+    </form>
+    <br><br>
+    <div class="container-fluid row align-center">
+        <h3>accordéon</h3>
+
+        <div class="row align-center">
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item accordion-button-bg ">
+                    <h2 class="accordion-header bg-warning" id="flush-headingOne">
+                        <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            HTML #1
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                            body.</div>
+                    </div>
+                </div>
+                <div class="accordion-item btn-danger">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed bg-purple " type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            CSS #2
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                            body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                </div>
+                <div class="accordion-item ">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed bg-success " type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Bootstrap #3
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                            body. Nothing more exciting happening here in terms of content, but just filling up the
+                            space to make it look, at least at first glance, a bit more representative of how this would
+                            look in a real-world application.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <section class="container">
+        <h3>drapeau benin </h3>
+        <div class="row">&nbsp;
+            <div class="col-4 bg-success  ">&nbsp;</div>
+            <div class="col-8">
+                <div class="row bg-warning ">&nbsp;</div>
+                <div class="row bg-danger ">&nbsp;</div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <section class="container">
+        <h3>drapeau Zambie</h3>
+        <div class="row w-25  ">
+            <div class="col-12 bg-success text-end rounded-top  ">&nbsp;<img src="../boostrap/img/200w.gif" class="float-right mh-100 " 
+                     width="30px"alt=""></div>
+
+            <div class="col-6 bg-success ">&nbsp;</div>
+            <div class="col-6">
+                <div class="row ">
+                    <div class="col-4 bg-danger inline-block">&nbsp;</div>
+                    <div class="col-4 bg-dark">&nbsp;</div>
+                    <div class="col-4 bg-warning rad-bottom-right  ">&nbsp;</div>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+    <h3>les marges et padding </h3>
+    <div class="container text-center display ">
+<span class="bg-info taille1 me-4 "  >1</span>
+<span class="bg-danger taille2 mb-2 pt-5 ps-5 pe-2 pb-2  " > <div class=>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, temporibus iste impedit aliquid sapiente cum natus ex alias laboriosam consectetur voluptas. Blanditiis ullam illum odio, unde laborum sed nulla veritatis ea exercitationem libero atque quae labore a et molestias. Velit quia amet fuga facilis? Eius sapiente a rem cupiditate enim?</div></span>
+<span class="bg-success taille3 mb-5">3</span>
+<span class="bg-warning taille4 mb-5">4</span>
+<span  class="bg-info taille5 ml-3">5</span>
+</div>
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

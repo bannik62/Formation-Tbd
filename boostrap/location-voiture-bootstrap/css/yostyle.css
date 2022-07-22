@@ -1,0 +1,59 @@
+.img1 {
+    width: 70px;
+    transition: transform .1s;
+}
+
+.img1:hover {
+  transform: scale(1.5);
+}
+
+.fond {
+    background-color: rgba(128, 128, 128, 0.087);
+}
+
+.marged {
+    margin-left: 40%;
+}
+
+.taille {
+    width: 300px;
+}
+
+.vert {
+    background-color: aquamarine;
+}
+
+.img1 {
+    width: 70px;
+    transition: transform .1s;
+}
+
+.img1:hover {
+  transform: scale(1.5);
+}
+
+
+
+.position {
+    position: relative;
+}
+
+.move {
+    left: 38%;
+    top: 0%;
+}
+
+h2 {
+    font-family: Hurricane;
+}
+
+.font {
+    font-family: Inter;
+}
+
+.titre {
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+
+}

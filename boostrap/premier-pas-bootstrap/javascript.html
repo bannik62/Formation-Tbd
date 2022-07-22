@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,">
+    <title>Cours JS</title>
+</head>
+
+<body>
+    <h1>Cours JS</h1>
+    <!--debut formulaire-->
+    <form action="#" method="post">
+        <div>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="user_name">
+        </div>
+        <div>
+            <label for="mail">e-mail&nbsp;:</label>
+            <input type="email" id="mail" name="user_mail">
+        </div>
+        <div>
+            <label for="msg">Message :</label>
+            <textarea id="msg" name="user_message"></textarea>
+        </div>
+        <input type="submit" id="yo" onclick="getValue">
+    </form>
+
+    <!--fin formulaire -->
+    <br><br><br><br>
+    <!--script verification saisie -->
+    <script>
+        document.forms[0].addEventListener("submit", function (evenement) {
+            if (document.getElementById("mail").value == "") {
+                evenement.preventDefault();
+                alert("Tapez un email valable pour avoir une réponse.");
+                document.getElementById("mail").focus();
+            }
+            else if (document.getElementById("msg").value == "") {
+                evenement.preventDefault();
+                alert("Pensez à taper un message !");
+                document.getElementById("msg").focus();
+            }
+
+            else if (document.getElementById("name").value == "") {
+                evenement.preventDefault();
+                alert("Pensez à taper votre nom!");
+                document.getElementById("name").focus();
+            }
+        });
+
+        function getValue() {
+            // Sélectionner l'élément input et récupérer sa valeur
+            let input = (document.getElementsById("name").value);
+            console.log(document.getElementsByid("name").value);
+            ;
+        }
+        typeof(input)
+    
+   // <!--fin script verification saisie -->
+
+
+   // <!--ldéclaration des variables-->
+    
+        //variable type e6
+        let adresse;  //a declarer plus tard 
+        let agee = 30;
+        let metier = "pompier"; //declaration du metier
+        //variable   
+        num2 = (50);
+        num1 = (10);
+        ageee = 35;
+        numero = 30;
+        nome = "julien";
+        adresse2 = "rue polux "
+        adresse = " dix rue des fleurs"; //declaration de variable
+        //les constante 
+        const bonjour = "bonjour, je suis ,yohann";
+        const nomComplet = "yohann vanherzecke";
+        const nom = "yohann"; //pour la valeur lenght et uppercase
+        const age = 33;
+        const moyenne = 18.5;
+        const isCool = true;
+        const x = null;
+        const y = undefined;
+
+
+        //declaration tableau
+        const numbers = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        const fruits = ["mangue", "pastèque", "poire", "orange", "ananas"];
+
+
+        // Declarations des objets 
+        const personne = {
+            prenom: "Julien",
+            nom: "La garde",
+            age: 30,
+            passions: ["foot", "natation", "jeux videos"],
+            adresse: {
+                rue: "rue Nationale",
+                ville: "Lille",
+                pays: "France"
+            }
+        };
+
+        //les objet suite 
+        const todos = [
+            {
+                id: 1,
+                text: "Faire les courses",
+                isCompleted: true,
+            },
+            {
+                id: 2,
+                text: "Balade au vieux Lille"
+                ,
+                isCompleted: true,
+            },
+            {
+                id: 3,
+                text: "Préparer le diner",
+                isCompleted: true,
+            },
+            {
+                id: 4,
+                text: "Regarder la TV",
+                isCompleted: false,
+            },
+        ];
+
+    </script>
+
+
+    <script>
+        document.write("Mon age est : <br> "
+            , agee, " ans , <br> mon nom est:  "
+            , nome, "<br> sont nom est:", nom, " <br> son age est: <br> ", age, "ans <br> leurs  adresse : ", adresse, "<br>la moyenne d'ages: <br> ", (agee + age) / 2, "<br> deuxieme adresse: ", adresse2, numero); // affichage soigné
+        document.write("<br> pourcent ", num2 % 8 * num1,);
+        "<br>"
+        "<br>"
+        document.write(`<br><br> il eteint les incendies? <br> ${metier}`);
+        document.write(` <br><br>mon nom yohann est composé de ${nom.length} caractéres `);
+        document.write(` <br><br>mon nom yohann en majuscule ${nom.toUpperCase()} `);
+        document.write(` <br><br>MON NOM EN MINUSCULE ${nom.toLowerCase()} `);
+        document.write(` <br><br>les premiere lettre de mon nom ${nom.substring(0, 4)} `);
+        document.write(` <br><br>les 4 premieres lettres de mon nom yohann en majuscule ${nom.toUpperCase().substring(0, 4)} `);
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
+        //tableau
+        document.write(` <br><br>le premier fruit du tableau fruits `, fruits[0], " et le 3eme ", fruits[3]);//avant ajout de fraise 
+        console.log(fruits.unshift("banane"));//l'ajout
+        document.write(` <br><br>le premier fruit du tableau fruits `, fruits[0], " et le 3eme ", fruits[4])//apres l'ajout de fraise 
+        console.log(fruits.shift("banane"));//supression
+        document.write(` <br><br>le premier fruit du tableau fruits: `, fruits[0], " et le 3eme   ", fruits[3], " la quatrieme case du tableau numbers ", numbers[4]); "<br>"
+
+        "<br>"
+        document.write(`<br><br> numero d'index de l'orange`, fruits.indexOf("orange"));
+        "<br>"
+        "<br>"
+        document.write(`<br> prenom de la personne: `, (personne.prenom));
+        document.write(`<br> loisir prefere : `, personne.passions[2]);
+        ////////////////////////////////////////////////////////////////////////////////////////////////////:
+
+        //ajout de variable et d'objet    
+        personne.email = "julie@example.com";//juste en console
+        personne.numero = "0600000000";//juste en console
+        ///insertion objet
+        personne.adresse = {
+            ville: "californie",
+            numeroporte: "75",
+            quartier: "beverly hills ",
+            pays: "amerique"
+        };
+        /////// insertion tableau 
+        personne.tableau2 = [null, null, null, 4, 5]
+        personne.tableau2[1] = "essais";
+        personne.tableau2[3] = "epimpon";
+
+
+        ////////////////////////////////////////affichage console////////////////////////////////////////////////
+
+        console.log(personne);//juste en console    
+        console.log(todos);//juste en console
+        console.log(Array.isArray(fruits)); //juste console
+
+        //split
+        console.log(nom.split(''));// juste en mode console 
+        console.log(nomComplet.split(''));// juste en mode console 
+        console.log(bonjour.split(','));// juste en mode console
+
+    </script>
+    <br>
+    <br><br><br>
+    <script> document.write("il aime ", (todos[3].text));
+        todos[2].isCompleted = true;
+        //todos[2].length;
+        todos[3].text = "faire du sport";
+        todos[0].unshift.Document.forms.getElementsById("name").text.value;
+
+
+        todos.push({
+            id: 5,
+            texte: "integrationde maquette",
+            isCompleted: false
+        }
+        ); 
+// fruits.push("banane");
+    </script>
+</body>
+
+</html>
