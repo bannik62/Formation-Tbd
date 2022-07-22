@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<div class="container mt-5">
+		<script>
+
+			vehicules = [
+				{ id: 1, marque: "Abarth", puissance: 10 },
+				{
+					id: 2,
+					marque: "Audi",
+					puissance: 12,
+				},
+				{
+					id: 3,
+					marque: "Bitter",
+					puissance: 52,
+				},
+				{
+					id: 4,
+					marque: "Bristol",
+					puissance: 14,
+				},
+				{
+					id: 5,
+					marque: "Cadillac",
+					puissance: 30,
+				},
+				{
+					id: 6,
+					marque: "Dacia",
+					puissance: 16,
+				},
+				{
+					id: 7,
+					marque: "Fiat",
+					puissance: 8,
+				},
+				{
+					id: 8,
+					marque: "Holden",
+					puissance: 9,
+				},
+				{
+					id: 9,
+					marque: "Imperial",
+					puissance: 5,
+				},
+				{
+					id: 10,
+					marque: "Jaguar",
+					puissance: 22,
+				},
+			];
+
+			function determine(tab) {//création de la fonction determine
+				let puisMin = tab[0];//declaration de variable de l'objet puissance de vehicule=table  a la placezero en tant que reference  pour la boucle afin de determiner le plus petit 
+				let puisMax = tab[0];//idem 
+				let somme = tab[0].puissance; // variable pour ajouté l'element reference dans la somme total 
+
+				for (let i = 1; i < tab.length; i++) {//calage de la boucle en evitant l'element zero du tableau sur ca longueur total 
+					let voiture = tab[i];//table vaut i pendant la boucle 
+					if (voiture.puissance < puisMin.puissance) { //verificationsi la puissance tester et plus petite que l'element de reference zero
+						puisMin = voiture;//le cas echeant l'anncienne valeur et ecrasé en laissant place a la plus petite 
+					}
+					if (voiture.puissance > puisMax.puissance) {//operation repeter a l inverse avec puissance max comparé a l'element zero 
+						puisMax = voiture;
+					}
+					somme += voiture.puissance;// une fois la somme calcule elle et ajouté au puissance total afin de la stoké dans une variable  prevu a cette effet  
+				}
+
+				let moyenne = somme / tab.length;  // calcul de la somme sur la longueur du tableau 
+
+				return { puisMin, puisMax, moyenne }; //return des variables pour l appelant 
+
+
+
+
+
+			}
+		</script>
+
+		<!-- <script>
+
+			let age = parseInt(prompt("quel et ton age ?"));
+
+			console.log(age.toString());
+
+			if (age.toString() == "NaN") {
+				alert('il faut remplir le prompt ')
+			}
+			else if (age >= 18) {
+				alert(`tu est majeur`);
+			}
+			else {
+				alert(`tu est mineur`);
+			}
+
+			function getRandomInt(max) {
+				return Math.floor(Math.random() * max);
+			}
+
+			let table = ["test", "test2", "lol"];
+
+
+			console.log(table[getRandomInt(table.length)]);
+
+
+			console.log(age);
+		</script>
+
+		<main>
+			<p>tableaux de recherche de puissance des vehicules </p>
+		</main>
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th><img src="img/voitutr.png" alt="voiture" style="width: 15%"></th>
+					<th scope="col">Marques</th>
+					<th scope="col">puissance</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">La moins puissante</th>
+					<td id="marqueMin">
+						<script>
+							document.write(determine(vehicules).puisMin.marque); //affichage des variable 
+						</script>
+					</td>
+					<td id="marqueMax">
+						<script>
+							document.write(determine(vehicules).puisMin.puissance);
+						</script>
+					</td>
+
+				</tr>
+				<tr>
+					<th scope="row">La plus puissante</th>
+					<td id="puisMin">
+						<script>
+							document.write(determine(vehicules).puisMax.marque)
+								;
+						</script>
+					</td>
+					<td id="puisMax">
+						<script>
+							document.write(determine(vehicules).puisMax.puissance);
+						</script>
+					</td>
+
+				</tr>
+				<tr>
+					<th scope="row">La puissance</th>
+					<td scope="row"> moyenne </td>
+					<td id="moyenne">
+						<script>
+							document.write(determine(vehicules).moyenne);
+						</script>
+					</td>
+
+				</tr>
+			</tbody>
+		</table> -->
+
+		<br><br><br><br>
+		<script>// program to generate a multiplication table
+
+			// take input from the user
+			//const number = parseInt(prompt('Enter an integer: '));
+
+			// //creating a multiplication table
+			//	for (let i = 1; i <= 10; i++) {
+
+			// multiply i with number
+			//	const result = i * number;
+
+			// display the result
+			//	document.write(`${number} * ${i} = ${result} <br> `);
+
+			// function multiplie() {
+
+			// 	var resultat = '<br/>';
+
+			// 	for (var i = 1; i < 11; i++) {
+
+			// 		for (var j = 1; j < 11; j++) {
+			// 			result += (i * j) + ' ';
+			// 		}
+
+			// 		result += '<br/>';
+			// 	}
+
+			// 	return result;
+
+			// }
+
+			// document.write(multiplie());
+
+
+			// function nmultiplie() {
+			// 	let resultat = '<table class="table table-striped" >';
+
+			// 	for (let index = 1; index < 11; index++) {
+			// 		resultat += '<tr>';
+
+			// 		for (let multi = 1; multi < 11; multi++) {
+			// 			//resultat += '<td>';
+			// 			//resultat += (index * multi);
+			// 			//resultat += '</td>'
+
+			// 			resultat += `<td> ${index * multi} </td>`;
+
+			// 		}
+			// 		resultat += '</tr>';
+			// 	}
+			// 	resultat += '</table>';
+
+			// 	return resultat;
+
+
+			// }
+			// document.write(nmultiplie())
+
+			contacts = [
+				{ id: 1, nom: "julien", tel: "0623536587" },
+				{ id: 2, nom: "oussama", tel: "0736521498" },
+				{ id: 3, nom: "stéphane", tel: "0621459874" },
+				{ id: 4, nom: "céline", tel: "0688695214" },
+				{ id: 5, nom: "li", tel: "0654123654" },
+				{ id: 6, nom: "abdel", tel: "0687563214" },
+				{ id: 7, nom: "sophie", tel: "0785213654" },
+				{ id: 8, nom: "ursule", tel: "0674563214" },
+				{ id: 9, nom: "joseph", tel: "0719752796" },
+				{ id: 10, nom: "adama", tel: "0641354789" },
+			];
+
+			function afficheContacts(contactsTab) {
+				document.write(`<table  class="table "border="1" cellspacing="5" cellpadding="5">`);
+				document.write(`
+    <tr>
+      <th>ID</th><th>Nom</th><th>Tel</th>
+    </tr>
+  `);
+				for (let i = 0; i < contactsTab.length; i++) {
+					document.write(`
+      <tr> 
+        <td> ${contactsTab[i].id}</td>
+        <td>  ${contactsTab[i].nom}</td>
+        <td>  ${contactsTab[i].tel}</td>
+      </tr>
+    `)
+				}
+				document.write(`<tr><td colspan="2">nb contacts</td><td>${contactsTab.length}</td></tr>`);
+				document.write(`</table>`);
+
+			}
+
+			afficheContacts(contacts)
+
+
+
+
+			// 	let resultat = '<table class="table table-striped" >';
+
+			// 	for (let index = 1; index < 11; index++)
+			// 		resultat += '<tr>';
+
+			// 		for (let multi = 1; multi < 11; multi++) {
+			// 			//resultat += '<td>';
+			// 			//resultat += (index * multi);
+			// 			//resultat += '</td>'
+
+			// 			resultat += `<td> ${index * multi} </td>`;
+
+			// 		}
+			// 		resultat += '</tr>';
+			// 	}
+			// 	resultat += '</table>';
+
+			// 	return resultat;
+
+
+			// }
+			// document.write(nmultiplie())
+
+
+		</script>
+		<br><br>
+		<br> <br>
+		<script>
+			let intitule = [
+				{
+					titre_album
+						: "Abacab",
+					interprete
+						: "Genesis",
+					annee
+						: "1981",
+					genre
+						: "Rock"
+				},
+				{
+					titre_album
+						: "dangerous",
+					interprete
+						: "M.Jackson",
+					annee
+						: "1992",
+					genre
+						: "pop"
+				},
+				{
+					titre_album
+						: "V",
+					interprete
+						: "Vald",
+					annee
+						: "2022",
+					genre
+						: "rap"
+
+				},
+				{
+					titre_album
+						: "Ready to die ",
+					interprete
+						: "Notorious B.I.G",
+					annee
+						: "1994",
+					genre
+						: "rap"
+
+				},
+				{
+					titre_album
+						: "Use your Illusion 1 et 2 ",
+					interprete
+						: "Nirvanna",
+					annee
+						: "1991",
+					genre
+						: "rock"
+
+				},
+				{
+					titre_album
+						: "bad ",
+					interprete
+						: "M.jackson",
+					annee
+						: "1982",
+					genre
+						: "rock"
+
+				},
+
+			];
+
+
+
+
+			function artiste(tris) { //declaration de la fonction artiste avec le parametre tris
+				document.write(`<table  class="table table-dark thead-light "  "border="1" cellspacing="5" cellpadding="5">`); //declaration d'un tableau 
+				document.write(` <tr> <th class="thead-light">titre album</th><th>interprete</th><th>annee</th><th>genre</th> </tr>`);//premiere ligne de se tableau avec en intitule les information rechercher
+
+
+				for (let i = 0; i < tris.length; i++) { // nous executons une boucle sur la longueur du tableau  intitulé qui a pris le parametre tris 
+					document.write(`  
+      <tr> 
+        <td>  ${tris[i].titre_album}</td>
+        <td>  ${tris[i].interprete}</td>
+        <td>  ${tris[i].annee}</td>
+		<td>  ${tris[i].genre}</td>
+      </tr>
+    `);
+
+				}
+
+				document.write(`</table>`);
+			}
+
+			artiste(intitule);
+
+
+		</script>
+		<br><br>
+
+
+		<br><br>
+		<script>
+			let peintre = [
+				{
+					nom: "picasso",
+					toile: ["autoportrait", "le reve", "la vie"],
+					naissance: "1881",
+					mort: "1973"
+
+				},
+				{
+					nom: "vangogh",
+					toile: ["la meuse", "le temps", "parlipinpin"],
+					naissance: "1981",
+					mort: "1973"
+				},
+				{
+					nom: "De vinci",
+					toile: ["la jocondee", "la cénes", "la vierge au rocher "],
+					naissance: "1452",
+					mort: "1519"
+				},
+				{
+					nom: "Dali",
+					toile: ["la Persistance de la mémoire", "les elephants", "Galatea des spheres "],
+					naissance: "1904",
+					mort: "1989"
+				}
+
+
+
+			]
+
+
+
+
+			function artiste(tris) {
+				document.write(`<table  class="table table-dark table-striped "  "border="1" cellspacing="5" cellpadding="5">`);
+				document.write(` <tr> <th>peintre</th><th>toile</th><th>naissance</th><th>mort</th> </tr>`);
+
+				var rand = Math.floor(Math.random() * 3);
+				for (let i = 0; i < tris.length; i++) {
+					document.write(`  
+      <tr> 
+        <td>  ${tris[i].nom}</td>
+		<td>  ${tris[i].toile[rand]}</td>
+        <td>  ${tris[i].naissance}</td>
+		<td>  ${tris[i].mort}</td>
+      </tr>
+    `);
+
+				}
+				//	var rValue = peintre.toile[rand];
+				document.write(`</table>`);
+
+
+
+			}
+
+			artiste(peintre);
+
+
+
+
+
+
+		</script>
+		<br><br>
+		<br><br>
+
+		<script>
+
+			function afficheContacts(contactsTab) {
+				let html = ``;
+
+				html += `<table border="1" cellspacing="5" cellpadding="5">
+              <tr>
+                <th>ID</th><th>Nom</th><th>Tel</th>
+              </tr>
+          `;
+				for (let i = 0; i < contactsTab.length; i++) {
+					html += `
+      <tr> 
+        <td> ${contactsTab[i].id}</td>
+        <td>  ${contactsTab[i].nom}</td>
+        <td>  ${contactsTab[i].tel}</td>
+      </tr>
+    `;
+				}
+				html += `<tr><td colspan="2">nb contacts</td><td>${contactsTab.length}</td></tr></table>`;
+				return html;
+			}
+
+			document.write(afficheContacts(contacts));
+
+
+		</script>
+		<br><br><br><br>
+
+		<script>
+			function afficheContacts(contactsTab) {
+				let html = ``;
+
+				html += `<table border="1" cellspacing="5" cellpadding="5">
+              <tr>
+                <th>ID</th><th>Nom</th><th>Tel</th>
+              </tr>
+          `;
+
+				contactsTab.map(
+					(contact) => {
+						html += `
+        <tr> 
+          <td>${contact.id}</td>
+          <td>${contact.nom}</td>
+          <td>${contact.tel}</td>
+        </tr> 
+      `;
+					}
+				);
+
+				html += `<tr><td colspan="2">nb contacts</td><td>${contactsTab.length}</td></tr></table>`;
+				return html;
+			}
+
+			document.write(afficheContacts(contacts));
+		</script>
+
+		<br><br>
+		<br><br>
+
+
+
+		<script>
+			function affichePeintre(paint) {
+				let html = ``;
+
+				html += `<table border="1" cellspacing="5" cellpadding="5">
+							<tr>
+							  <th>nom</th> <th>toile</th> <th>naissance</th><th>mort</th>
+							</tr>`;
+
+
+
+				paint.map(
+					(peintre) => {
+						html += `
+							<tr> 
+								<td>${peintre.nom}</td>
+								<td>${peintre.toile[0]}</td>
+								<td>${peintre.naissance}</td>
+								<td>${peintre.mort}</td>
+							</tr> `;
+					}
+				);
+
+				html += `</table>`;
+				return html;
+			}
+
+			document.write(affichePeintre(peintre));
+
+
+
+		</script>
+		<br><br><br><br><br>
+		<script>
+			var  contacts = [
+				{ id: 1, nom: "julien", tel: "0623536587" },
+				{ id: 2, nom: "oussama", tel: "0736521498" },
+				{ id: 3, nom: "stéphane", tel: "0621459874" },
+				{ id: 4, nom: "céline", tel: "0688695214" },
+				{ id: 5, nom: "li", tel: "0654123654" },
+				{ id: 6, nom: "abdel", tel: "0687563214" },
+				{ id: 7, nom: "sophie", tel: "0785213654" },
+				{ id: 8, nom: "ursule", tel: "0674563214" },
+				{ id: 9, nom: "joseph", tel: "0719752796" },
+				{ id: 10, nom: "adama", tel: "0641354789" },
+			];
+
+			
+			const result = contacts.filter( (contact) => {val => val.tel <= 07  });
+			console.log(result);
+			
+
+
+			
+		</script>
+
+</body>
+
+</html>

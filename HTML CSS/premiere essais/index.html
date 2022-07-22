@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>rick & morty</title>
+</head>
+<body>
+
+    <img src="img/rm.png" alt="logo" width="950" height="300">
+    <div>
+        <fieldset>
+            <form action="php.php"  for="logging password">login</form>
+        
+            <label for="logging"><b>Nom d'utilisateur</b></label>
+                <input type="text" placeholder="Entrer le nom d'utilisateur" name="logging" required>
+       
+            <label for="password"><b>Mot de passe</b></label>
+                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+            
+            <div> 
+                <a href=" inscription.html" style="float:right ;"for="logging password">Toujours pas inscris</a></div>
+                <input type="button" value="envoyer"> 
+        </fieldset>
+
+     
+    </div>
+    <div>  
+    <h1>Rick et Morty
+        <p>Rick et Morty (Rick and Morty)</br> est une série d'animation pour adultes américaine créée par Justin Roiland et Dan Harmon, diffusée depuis le 2 décembre 2013 sur Cartoon Network, dans la tranche fin de soirée Adult Swim. La série suit les mésaventures de Rick Sanchez, un scientifique cynique et fantasque, et de son petit-fils, Morty Smith, perturbé et facilement influençable, qui partagent leur temps entre une vie domestique et des aventures interdimensionnelles. Roiland double les personnages principaux, tandis que Chris Parnell, Spencer Grammer et Sarah Chalke prêtent leur voix au reste de la famille.
+
+        La série provient d'une courte parodie animée reposant sur la trilogie de films Retour vers le futur, titrée The Real Animated Adventures of Doc and Mharti, créée par Roiland pour Channel 101, un festival de court métrage cofondé par Harmon. Lorsque Adult Swim approche Harmon pour des idées d'émissions de télévision, lui et Roiland décident de développer un programme basé sur ce court métrage.
+        
+        La première saison de la série comporte onze épisodes d'environ 22 minutes et se termine en avril 2014. Une seconde saison, composée de dix épisodes, débute en juillet 2015 et se termine en octobre de la même année. En août 2015, la production d'une troisième saison de dix épisodes chez Adult Swim est annoncée1. Attendue initialement fin 20162, elle est finalement diffusée à partir du 1er avril 20173.
+        
+        En France, les saisons 1 et 2 étaient diffusées sur France 4 dès le 9 octobre 2015 dans la tranche « Réanimation » à raison de deux épisodes par semaine. La série est rediffusée sur Toonami dans la case [adult swim] (proposée le soir entre 23 h et 2 h) avec la saison 3 en inédit TV et la saison 4. Elle est également disponible sur Netflix. La série est aussi doublée au Québec et diffusée depuis le 18 mai 2018 sur Télétoon dans le bloc Télétoon la Nuit4.
+        
+        Le programme est très bien reçu par la critique pour son originalité, sa créativité et son humour5.
+        
+        Sony s'est lié à Adult Swim afin de faire la promotion du jeu vidéo Death Stranding, dans une vidéo les personnages Rick et Morty en font la publicité6.</p>
+    </h1>
+    </div>
+    <div>
+        <fieldset>
+        <form action="php.php" method="get" name="saison">
+            <label for="Saison">les saisons:</label>
+            <select id="saison" name="saison" onchange="location=this.value" onload="location=this.saison"  >
+              <option value="Veuillez choisir">saison</option>
+              <option value="https://www.volvo.com/en/">saison 1</option>
+              <option value="https://www.saab.com">saison 2</option>
+              <option value="https://www.fiat.com">Saison3</option>
+              <option value="https://audi.com">Saison4</option>
+        </fieldset>
+    </div>
+    
+</body>
+</html>

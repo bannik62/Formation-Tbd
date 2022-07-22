@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>exercisse </title>
+</head>
+
+<body bgcolor="beige">
+
+    <div name="div1">
+        <center>
+            <h2>Les appelles de fonctions </h2>
+        </center>
+
+        <script>
+
+            function bonjour() {
+                document.write(" <p><u>création d'une variable basic et son apel</u></p> <br/>hello")
+                document.write(" tous le monde bienvenu sur les cour de js ")
+            }
+            bonjour()
+        </script>
+    </div>
+    <!--***********************************************************************************************************-->
+    <div name="div2">
+        <center>
+            <h2>La concaténation et porté de variable</h2>
+        </center>
+        <script>
+            let data = " la variable est dans la porté de la fonction";
+
+            function concatenation() {
+                let data2 = " celle ci n 'est accessible que par la fonction lui etant interne ";
+
+                document.write(" <p><u> ceci et l'ancienne pour l'écriture  des chaine de caractére </u></p> <br/> TEST : " + data + "<br/>" + "TEST" + data2);// ancienne version de concatenage 
+                document.write(` <p><u> ceci et la nouvelle version pour l'écriture  des chaines de caractére </u></p><br/>TEST ${data} <br/> TEST ${data2} <br/><br/> <p><u> le variable peuvent deborder dans les fonctions mais inversement <br/> une variable declaré dans une fonction ne peut pas déborder vers l'exterieur</u>  </p>`); // nouvelle version 
+            }
+            function concatenation() {// appel de la fonction 
+                let ici = "ici" //variable dans la portée de consolelog() donc prise en compte      
+
+                document.write(`il y a une variable dans la fonction concaténation  data2 ,qui n'est pas dans la porté de cette appel, <br/>car étant interne a la fonction concaténation ; la variable data2 devrait se trouvais  <br/> ici =>${ici}$ {data2} <=<br/><u>  mais data2 n'étant pas accesible il bloquerait l'affichage </u> `);
+            }
+            concatenation()
+          //  console.log(ici); commenter pour l'affichage
+        </script>
+    </div>
+    <!--*********************************************************************************************************-->
+    <div name="div3">
+        <center>
+            <h2>La fonction somme avec les paramétres</h2>
+        </center>
+        <script>
+
+
+            function somme(a, b) {//declaration d'une fonction avec deux paramétre 
+                let total = a + b
+                document.write(`<p><u> premiére façon avec cette façon d'écrire la fonction n'est pas portable</u>  </p> <br/>la somme des variables donne <u>${a}</u> + <u>${b}</u> = <u>${total}</u><br/> <br/> `);
+            }
+            somme(4, 4);//attribution de paramétre 
+            // console.log(a,b); cette variable ne sera pas affiché car hors de porté étant dans une fonction 
+
+
+            function somme2(a, b) {
+
+                return a + b; //renvoi du resultat et arret de la fonction si il n' y a pas de condition 
+
+            }
+            let total = somme2(4, 4); // total <= somme2() 4 , 4 a l 'appel de la fonction nous attendons non plus des parametres mes des arguments'
+            document.write(`<p><u>deuxieme façon d'écrire portable en stockant le resultat çela somme dans une variable <br/> le return de la fonction sers a rendre disponible le resultat pour l'appelant de la fonction </u></p> de la somme des variables($ {a})4 + ($ {b}) 4 = ($ {total})${total} `);
+            let totaux = somme2(2, 2)
+            document.write(` <br/><br/> portabilité de la fonction pour affiché d'autre valeur  en l'occurence ici  2 + 2 = ${totaux}`);
+
+        </script>
+    </div>
+    <!--*************************************************************************************************-->
+    <div>
+        <center>
+            <h2>Les fonctions fléchés </h2>
+        </center>
+
+        <script>
+
+            let somme3 = (x, y) => { return x + y };
+
+            document.write(`<p>faire une sommes avec  une fonction flecher  () => {}</p> <br> ceci et une addition obtenu avec une fonction flécher 45 + 50 = ${somme3(45, 50)}`)
+
+            let tot = somme3(10, 10)//réaffectation  des arguments 
+            document.write(`<p>faire une sommes avec  une fonction flecher  () => {}<br/> avec portabilité de la fonction en changeant les valeurs  en l'occurence ici (10,10)  </p> <br/>10+10 =  ${tot}`)
+        </script>
+
+        <center>
+            <h2>Les fonctions ternaires </h2>
+        </center>
+        <script>
+            let nombre = 18; //si l'ont applique un nombre negatif ou positif cela changera l affichage de la ternaire 
+            let texte;
+            cons = "vérifier dans la console "
+
+            if (nombre >= 18) { texte = " il est  majeur ()"; }
+            else { texte = " il n'est pas  majeur  "; }
+
+            console.log(texte);
+
+            /////////////////la version ternaire /////////////
+
+            let age = 21;// definition de la valeur age 
+            let statut;// declaration de la variable  en attente de valeur 
+            let consol = `verifié la console.log() <br> pour la ternaire  la réponse sera sous forme de boléene`
+            statut = age >= 18;// assignation de la valeur 21  a statut suivi d'un  test de grandeur avant de nous repondre sous forme boléenne
+            console.log(` réponse de la ternaire : ${statut}`);
+            document.write(`<p>${consol}<p/>`)
+
+        </script>
+        <center>
+            <p><u>instruction faite sans le ternaire</u></p>
+            <h5><br /> nombre = -5; <br />
+                let texte;<br /><br />
+
+                if (nombre >= 0) { texte = "ce nombre et positif"; }<br />
+                else { texte = "le texte et negatif" ;}<br />
+
+                console. log(texte);<br />
+                document. write(` `)<br />
+            </h5>
+
+
+            <p><u></u> instruction avec le ternaire<u></u></p>
+            <h5><br />
+                let age = 21; <br />
+                let statut ;<br />
+                let consol = `verifié la console.log()`<br />
+                statut = age >= 18;<br />
+                console.log(` ${statut}`);<br />
+                document.write(consol)<br />
+            </h5>
+        </center>
+    </div>
+    <!--**********************************************************************************************************-->
+    <div>
+        <center>
+            <h2>Les boucles </h2>
+        </center>
+        <script>
+            ////////////////////////////////////////boucle while////////////////////////////////////////////////////
+            let i = 1; //j'initialise le compteur a 1 pour eviter le decallage de position 
+            let boucleWhile = "<p>écriture avec la boucle while<p/>";
+            boucleFor = "<p>ecriture avec la boucle for<p/>";
+            boucleForEach = "<p>ecriture avec la boucle foreach<p/>";
+            boucleForMap = "<p>ecriture avec la boucle map <p/>";
+            document.write(boucleWhile);
+            while (i <= 4) { // tant que la condition  i plus petit que 5 
+                document.write(` <br/> ${i}`);//document write sera réitéré 
+                i++// et incrémenté de 1 a chaque fois 
+
+            }
+            console.log(`résultat de la boucle while 0 <= 5 :${i}`)
+        </script>
+
+        <center>
+
+            <h5><br /> let i = 1;<br /><br />
+
+                while (i
+                <= 5 ) { <br />
+                document.write(`${i}`);<br />>
+                i++//;<br /> }
+            </h5>
+        </center>
+        <script>
+
+        </script>
+
+        <center>
+            <h4> <u>tableau d'objet exercisse a 3 dimension</u>
+                <br /><br />contacts = [<br />
+                { id: 1, nom: "julien", tel: "0623536587" },<br />
+                { id: 2, nom: "oussama", tel: "0736521498" },<br />
+                { id: 3, nom: "stéphane", tel: "0621459874" },<br />
+                { id: 4, nom: "céline", tel: "0688695214" },<br />
+                { id: 5, nom: "li", tel: "0654123654" },<br />
+                { id: 6, nom: "abdel", tel: "0687563214" },<br />
+                { id: 7, nom: "sophie", tel: "0785213654" },<br />
+                { id: 8, nom: "ursule", tel: "0674563214" },<br />
+                { id: 9, nom: "joseph", tel: "0719752796" },<br />
+                { id: 10, nom: "adama", tel: "0641354789" },<br />
+                ];
+
+            </h4>
+            <h4><u>Simple tableau :<br /> <br> listeNom = [<br />"antoine", "alice", "alain", "killian", "renaud",
+                    "yohann",
+                    "djenk", "franck"<br />]; </u></h4>
+        </center>
+        <script>
+
+
+            let contacts = [
+                { id: 1, nom: "julien", tel: "0623536587" },
+                { id: 2, nom: "oussama", tel: "0736521498" },
+                { id: 3, nom: "stéphane", tel: "0621459874" },
+                { id: 4, nom: "céline", tel: "0688695214" },
+                { id: 5, nom: "li", tel: "0654123654" },
+                { id: 6, nom: "abdel", tel: "0687563214" },
+                { id: 7, nom: "sophie", tel: "0785213654" },
+                { id: 8, nom: "ursule", tel: "0674563214" },
+                { id: 9, nom: "joseph", tel: "0719752796" },
+                { id: 10, nom: "adama", tel: "0641354789" },
+            ];
+            /////////////////////////////////////bouclefor////////////////////////////////////////////
+            document.write(`<br/><br/>${boucleFor} <br/> `);
+
+            let listeNom = ["antoine", "alice", "alain", "killian", "renaud", "yohann", "djenk", "franck"];
+
+
+
+            let contact = listeNom;
+            var text = "<center><h4><u>parcours de simple tableau  avec une boucle for et affichage</u></h4></center> "
+            document.write(` ${text}`)
+            for (let i = 0; i < contact.length; i++) {
+                console.log(contact[i]);
+
+                document.write(`<center>nom :${contact[i]}</center><br/>`);
+            };
+
+
+            /////////////////////////boucle each ////////////////////////
+
+            var text = "<center><h4><u>parcours de simple tableau  avec une boucle for et affichage</u> </h4></center>"
+            document.write(` ${text}`)
+
+            contacts.forEach(element => {
+                console.log(` foreach : ${element.tel}`);//passage du tableau contact a  la methode forEach 
+                document.write(` <center>tel :${element.tel}</center> <br/>`)
+
+            });
+
+            ////////////////////// bouclemap/////////////////
+
+            document.write(`<br/> <br/>${boucleForMap}`)
+
+            var text = "<center><h4><u>parcours de simple tableau  avec une boucle map et affichage</u></center> </h4>"
+            document.write(` ${text}>`)
+
+            let tabClone = contacts.map((clone) => document.write(`<center> id :${clone.id}<center><br/>`))
+
+        </script>
+
+
+    </div>
+    <!--***********************************************************************************************-->
+    <div>
+
+
+
+        <script>
+            text = `<p>résultat et affichage imbrication de function et verification de la porté une addition  </p>`;
+            document.write(`${text} `)
+
+            function externe(x) {
+                function interne(y) {
+                    return x + y;
+
+                }
+                return interne;
+            }
+            //  let = `${externe}(3)`;//donne indefini 
+            // let r2 = `${interne}(4)`;//donne une erreur 
+
+            let r3 = ` résultat  et affichage  imbrication de function et verification de la porté ${externe(3)(4)}`;// seul la variable exterieur est dans la porter  du son excecution elle apelle sa callback interne 
+            let r4 = ` résultat  et affichage  imbrication de function et verification de la porté ${externe(7)(77)}`;
+            console.log(r3);
+            console.log(r4); //essais de portabilité de la fonction  afin d'y ajouter d'autre arguments  
+
+        </script>
+
+        <center>
+            <h2>imbriquations de fonction</h2>
+            <h4><u>imbriquations de fonction </u></h4>
+
+            <h4><br />
+                function externe(x) {<br />
+                function interne(y) {{<br />
+                return x + y;{<br /><br />
+                let r4 = ` résultat et affichage imbrication de function et verification de la porté
+                ${externe(7)(77)}`;<br />
+                }<br />
+                return interne;<br />
+                }<br />
+                let = `${externe}(3)`;//donne indefini <br />
+                let r2 = `${interne}(4)`;//donne une erreur <br />
+                let r3 = `${externe}(3)(4)`;// seul la variable exterieur est dans la porter du son excecution elle
+
+                apelle sa callback interne <br />
+                console.log(r3);<br />
+                console.log(r4); //essais de portabilité de la fonction afin d'y ajouter d'autre arguments en
+                console(log)
+            </h4>
+        </center>
+
+
+    </div>
+    <!--******************************************************************************************************-->
+    <div>
+        <p>simple conditions d'une valeur positive ou negative </p>
+
+        <center>
+            <h2> les conditions </h2>
+            </p><br /> function testNum(a) {<br />
+            let result;<br />
+            if (a > 0) {<br />
+            result = 'positive';<br />
+            } else {<br />
+            result = 'NOT positive';<br />
+            }
+            return result;<br />
+            }
+        </center>
+        <script>
+            document.write(`<center><u>${testNum()}</u></center <br/><br/><br/><br/>`);
+            function testNum(a) {
+
+                let result;
+                if (a > 0) {
+
+                    result = ' reponse simple condition :positive ';
+                } else {
+
+                    result = `  reponse simple condition: negatif `;
+                }
+                return result;
+            }
+            console.log(testNum());
+
+
+
+        </script>
+        <center>
+            <h2>le commutateur switch </h2>
+            <h3><u>commutateur switch avec l outil date()</u></h3>
+            <h3> const nosjours = new Date().getday;<br />
+                let jour = nosjours;<br />
+                switch (nosjours) {<br />
+                case 1: jour = " lundi ";<br />
+                break;<br />
+                case 1: jour = " mardi ";<br />
+                break;<br />
+                case 2: jour = " jeudi ";<br />
+                break;<br />
+                case 3: jour = " vendredi ";<br />
+                break;<br />
+                case 4: jour = " samedi ";<br />
+                break;<br />
+
+                case 5: jour = " dimanche ";<br />
+                break;<br />
+                default: jour = "inconnu ";<br />
+                break;<br />
+                }<br /></h3>
+        </center>
+
+        <script>
+            let jour, numJour;
+            let numJour = new Date().getDay();
+
+            console.log(numJour);
+
+            switch (numjour) {
+                case 1: jour = " lundi ";
+                    break;
+                case 2: jour = " mardi ";
+                    break;
+                case 3: jour = " mercredi ";
+                    break;
+                case 4: jour = " jeudi ";
+                    break;
+                case 5: jour = " vendredi ";
+                    break;
+                case 6: jour = " samedi ";
+                    break;
+
+                case 0: jour = " dimanche ";
+                    break;
+
+                default: jour = "inconnu ";
+                    break;
+            }
+            console.log(jour)
+            document.write(`<center> nous ne pouvons pas testé des conditions avec switch mes seulement des valeurs<br/><u> le jour actuel est : ${jour}</u></center>`)
+        </script>
+
+
+    </div>
+
+
+</body>
+
+</html>

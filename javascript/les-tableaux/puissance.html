@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			vehicules = [
+				{ id: 1, marque: "Abarth", puissance: 10 },
+				{
+					id: 2,
+					marque: "Audi",
+					puissance: 12,
+				},
+				{
+					id: 3,
+					marque: "Bitter",
+					puissance: 52,
+				},
+				{
+					id: 4,
+					marque: "Bristol",
+					puissance: 14,
+				},
+				{
+					id: 5,
+					marque: "Cadillac",
+					puissance: 30,
+				},
+				{
+					id: 6,
+					marque: "Dacia",
+					puissance: 16,
+				},
+				{
+					id: 7,
+					marque: "Fiat",
+					puissance: 8,
+				},
+				{
+					id: 8,
+					marque: "Holden",
+					puissance: 9,
+				},
+				{
+					id: 9,
+					marque: "Imperial",
+					puissance: 5,
+				},
+				{
+					id: 10,
+					marque: "Jaguar",
+					puissance: 22,
+				},
+			];
+
+			function determine(tab) {
+				let puisMin = tab[0];
+				let puisMax = tab[0];
+				let somme = tab[0].puissance;
+
+				for (let i = 1; i < tab.length; i++) {
+					let voiture = tab[i];
+					if (voiture.puissance < puisMin.puissance) {
+						puisMin = voiture;
+					}
+					if (voiture.puissance > puisMax.puissance) {
+						puisMax = voiture;
+					}
+					somme += voiture.puissance;
+				}
+
+				let moyenne = somme / tab.length;
+
+				return { puisMin, puisMax, moyenne };
+			}
+		</script>
+
+		<main>
+			<p>Voir Console ( F12 )</p>
+		</main>
+
+		<table>
+			<tr>
+				<th></th>
+				<th>Marques</th>
+				<th>Puissances</th>
+			</tr>
+			<tr>
+				<td>La plus puissante</td>
+				<td id="marqueMin">
+					<script>
+						document.write(determine(vehicules).puisMin.marque);
+					</script>
+				</td>
+				<td id="marqueMax">
+					<script>
+						document.write(determine(vehicules).puisMin.puissance);
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>La moins puissante</td>
+				<td id="puisMin">
+					<script>
+						document.write(determine(vehicules).puisMax.marque)
+						;
+					</script>
+				</td>
+				<td id="puisMax">
+					<script>
+						document.write(determine(vehicules).puisMax.puissance);
+					</script>
+				</td>
+			</tr>
+			<tr>
+				<td>La moyenne des puissances</td>
+				<td id="moyenne">
+					<script>
+						document.write(determine(vehicules).moyenne);
+					</script>
+				</td>
+			</tr>
+		</table>
+
+	
+	</body>
+</html>

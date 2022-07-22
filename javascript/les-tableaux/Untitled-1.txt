@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cree une variable qui recupere  les numeros des contacts 
+ensuite
+
+recuperer cette variable et la passer sous la methode  filter()
+ensuite 
+
+ cree une fonction  qui retourne les numeros de telephone commenceant par 06
+ 
