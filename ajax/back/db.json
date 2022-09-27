@@ -1,0 +1,25 @@
+{
+  "contacts": [
+    {
+      "id": "1663660915404",
+      "nom": "charlemagne",
+      "prenom": "jerome"
+    },
+    {
+      "nom": "yohann",
+      "prenom": "zzzz",
+      "id": "1663868762083"
+    },
+    {
+      "nom": "yohann",
+      "prenom": "d",
+      "id": "1664145476027"
+    },
+    {
+      "nom": "e",
+      "prenom": "d",
+      "id": "1664145534337"
+    }
+  ],
+  "clients": []
+}

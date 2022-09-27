@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="jquery-3.6.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" id="meta">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>bonjour</p>
+    <button id="bMeta">contenu meta tag </button>
+    <script>
+
+        $("#bMeta").click(function (e) {
+            e.preventDefault();
+            //je crée 4 tableau de specification 
+            let specificationTab = [
+                ["imprimante"],
+                ["noir", "blanc", "beige", "gris"],
+                ["canon", "hp", "philips", "samsung"],
+                ["5200", "6400", "rf200", "b-52"]
+            ]
+
+            let resultat =
+                     // je crée une variable  indexr qui me donne un index au hasard dans les trois tableaux 
+                specificationTab.map((parcours) => {
+                    //  console.log(indexR); je verifie ma valeursi elle est definie je continue 
+                    let indexR = Math.floor(Math.random() * parcours.length);
+                    // je renvois l'index 
+                    return parcours[indexR]
+
+                })
+
+
+            let baliseMeta = $("#meta");//simplification ${meta}
+            // j'insere l'attribut grace a attr() et je joins les tableaux avecla methode join() au caractere "," join() qui est l'inverse de split()         
+             baliseMeta.attr("content", resultat.join(", "));
+             //j'affiche le contenu de l attribut  dans un paragphe pour verification du deroulement du code 
+            $("p").text(baliseMeta.attr('content'));
+        });
+
+
+
+    </script>
+    
+
+
+
+
+
+
+
+
+</body>
+
+</html>

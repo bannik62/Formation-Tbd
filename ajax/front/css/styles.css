@@ -1,0 +1,27 @@
+/* .sidebar-sticky { */
+	/* height: calc(100vh - 48px); */
+	/* overflow-x: auto;
+	overflow-y: auto; */
+	/* Scrollable contents if viewport is shorter than content. */
+/* }  */
+
+.message2 {
+	
+	position: absolute;
+	top: 100%;
+	width: 90%;
+}
+
+.toasty {
+	height: auto;
+	width: 95%;
+	border: 1px solid black;
+}
+li{
+margin: 5px;
+} 
+span{
+	background-color: bisque;																;
+	border: solid 3px black;
+	width: 100px;
+}

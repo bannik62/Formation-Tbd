@@ -1,0 +1,241 @@
+:root {
+	--barre-top: #1b739e;
+	--vert-pistache: #afcc36;
+}
+
+*/
+/* INITIALISATION */
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.vert-pistache {
+	color: var(--vert-pistache);
+}
+.bleu-barre-top {
+	color: var(--barre-top);
+}
+.arriere-bleue {
+	background: var(--barre-top);
+}
+.menu {
+  top : -4px;
+}
+.parallax-bg {
+	background-image: url("../images/atouts-bg.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.atouts .card-body {
+	color: var(--bs-gray-dark);
+}
+.image-transition {
+	transition: all 2s ease;
+}
+svg,
+.card,
+.card svg {
+	transition: color 0.5s, background 1s;
+}
+/* A OPTIMISER */
+footer svg,
+.services .card:hover svg {
+	color: var(--vert-pistache);
+	background: white;
+	transition: color 0.5s, background 1s;
+}
+svg,
+.team .flip-card:hover svg,
+footer a:hover svg {
+	color: white;
+	background: var(--vert-pistache);
+	transition: color 0.5s, background 1s;
+}
+svg:hover,
+.portfolio a:hover,
+.success a:hover,
+.flip-card:hover svg:hover,
+.flip-card:hover svg:hover {
+	color: var(--vert-pistache);
+	background: white;
+	transition: color 0.5s, background 1s;
+}
+.services .card:hover,
+.icone:hover {
+	color: white;
+	background: var(--vert-pistache);
+	transition: color 0.5s, background 1s;
+}
+.barre-top .d-flex div:first-child a,
+.barre-top .d-flex div:first-child svg {
+	color: var(--vert-pistache);
+	background: none;
+	transition: all 0.3s;
+}
+.team .flip-card:hover svg:hover {
+	color: var(--vert-pistache);
+	background: white;
+	border: 1px solid var(--vert-pistache);
+}
+.barre-top .d-flex div:first-child a:hover,
+.barre-top .d-flex div:first-child a:hover svg {
+	color: white !important;
+}
+.portfolio a:hover {
+	color: var(--vert-pistache) !important;
+}
+.success a:hover {
+	color: var(--vert-pistache) !important;
+	background: white !important;
+	transition: color 0.5s, background 1s;
+}
+/* NAVBAR */
+.navbar-expand-lg .navbar-nav .nav-link {
+	color: var(--barre-top);
+}
+.nav-link.active,
+.nav-link:hover {
+	color: white !important;
+	background: var(--vert-pistache);
+}
+.sous-menu {
+	border-top: 3px solid var(--barre-top);
+}
+.dropdown-item:hover {
+	color: var(--barre-top);
+}
+/* SLIDESHOW */
+.carousel-item img {
+	height: calc(100vh - 115px);
+}
+.atouts img:hover,
+.equipe img:hover,
+.portfolio img:hover {
+	transform: rotate(360deg);
+	transition: all 2s ease;
+}
+.equipe {
+	background-image: url("../images/team-bg.jpg");
+}
+.parallax-bg > div {
+	background: rgba(0, 0, 0, 0.6);
+}
+.atouts > div {
+	background: rgba(255, 255, 255, 0.7);
+}
+/* portfolio */
+.portfolio .active {
+	background: black;
+	color: white;
+	border-radius: 8px;
+	border: none;
+}
+.portfolio-images img {
+	width: 23%;
+	margin: 15px 1%;
+}
+.success {
+	background-image: url("../images/success-bg.jpg");
+}
+/* team */
+.flip-card-inner {
+	height: 300px;
+	transition: transform 1.5s;
+	transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+.flip-card-back {
+	transform: rotateY(180deg);
+}
+.flip-card:hover svg:hover {
+	transition: all 0.5s;
+}
+.slogan {
+	background-image: url(../images/slogan-bg.gif);
+}
+/* testimonials */
+.user-photo img {
+	width: 120px;
+	height: 120px !important;
+	border-radius: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.contact {
+	background-image: url(../images/contact-bg.jpg);
+}
+.contact input {
+	width: 45%;
+	height: 60px;
+}
+footer h5::after {
+	content: "";
+	width: 15%;
+	height: 3px;
+	background: var(--vert-pistache);
+	position: absolute;
+	top: 55px;
+	left: 0;
+}
+footer img {
+	height: 250px;
+}
+footer .parallax-bg {
+	background-image: url("../images/footer-bg.jpeg");
+}
+footer .parallax-bg > div {
+	background: rgba(0, 0, 0, 0.8);
+}
+
+/* MEDIA QUERIES */
+
+/* Mobile :   XS & SM */
+@media (max-width: 767px) {
+	footer img {
+		width: 100% !important;
+	}
+}
+/* factorisation */
+/* Mobile : XS, SM et MD */
+@media (max-width: 991px) {
+	.carousel-item img {
+		height: calc(50vh);
+	}
+	.services .card-text {
+		font-size: 1.2rem;
+	}
+	.atouts p {
+		font-size: 1.3rem;
+	}
+	.atouts .ratio {
+		width: 70%;
+		margin: 0 auto;
+	}
+	.equipe .ratio {
+		width: 30% !important;
+	}
+	.flip-card-front img {
+		height: 73%;
+	}
+}
+/* PC */
+@media (min-width: 992px) {
+	.services .carte,
+	.equipe .carte {
+		width: 23%;
+	}
+}
+

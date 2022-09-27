@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="meta" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>jqueryo</title>
+</head>
+
+<body>
+ 
+    <nav class="mb-5">
+        <p>&nbsp; navigation  </p>
+    </nav>
+    <br>
+    <div class="container   d-flex justify-content-between rounded-5">
+
+        <div class="  " style=" height:100%">
+            <p class="affichemenu mb-0 ps-2 pe-2 fs-2">affichez le menu </p>
+
+            <div class="menu cacher ">
+                <ul>
+                    <li id="afficheFenetre">jeu trouver le nombre </li>
+                    <li id="tag">generateur metatag</li>
+                    <li id="ajax">requete ajax</li>
+                </ul>
+
+            </div>
+        </div>
+        
+        
+        <!-- <div class="jeu"> -->
+            <div class="card border-primary mt-3 mb-3" style="max-width: 18rem;">
+                <div class="card-header">deviné le chiffre </div>
+                <div class="card-body text-primary">
+                    <h5 class="card-title">Bienvenue</h5>
+                    <p class="card-text">trouver un nombre dans une fourchette de chiffre que vous allez prédéfinir dans
+                        le champs.</p>
+                    <!-- l evenement submit s applique a un formulaire  -->
+                    <form id="form">
+                        <label for="chiffre">Tentez votre chance jouer </label>
+                        <input type="text" name="chiffre" id="chiffre" />
+                        <button class="button">jouer /button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="generateur">
+            <input type="text" value="recherche" name="choix" id="choix"/><br/>
+            <button class="genere p-1  ms-5 me-5" style="border-color: white;">générateur </button><br/>
+            <span class=" ms-3 me-3" id="affichage"></span>
+        </div>
+    </div>
+   
+   
+    <label for="affichage ">affichage  formatée de la requete ajax</label> 
+    <div id="card" name="affichage">
+       
+        
+
+
+
+
+    </div>
+
+    <span class="nbEssais"></span>
+
+    <div>
+        <p>footer</p>
+    </div>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ajax.js"> </script>
+    <script src="js/requeteAjax.js"></script>   
+</body>
+
+</html>

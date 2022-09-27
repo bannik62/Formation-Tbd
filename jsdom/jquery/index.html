@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cours jQuery</title>
+    <style>
+        .para-style {
+            color: skyblue;
+            border: 1px solid skyblue;
+        }
+
+        .para-style-clique {
+            color: gray;
+            border: 1px solid gray;
+        }
+
+        .para-rouge {
+            background-color: red;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .bg-bc {
+            background: skyblue;
+            color: white;
+            border: 1px solid skyblue;
+        }
+
+        .change-style-css {
+            background: black;
+            color: green;
+            font: size 2rem;
+        }
+
+        .style-each {
+            background: black;
+            color: green;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body id="print">
+    <button class="on-btn">bouton on</button>
+    <button class="trigger-para">trigger-para</button>
+    <button class="change-style">changer style</button>
+
+    <p class="para1">texte du para 1</p>
+
+    <ul>
+        <li>
+            <span>span de li 1 - petit fils de ul</span>
+        </li>
+        <li>li 2</li>
+        <li>li 3</li>
+        <li>li 4</li>
+    </ul>
+
+    <div class="dom">
+        <h3>Titre 3</h3>
+        <p class="para-dom">
+            <span> span para dom</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid rerum voluptas voluptatem, dicta
+            accusantium assumenda
+            quidem molestiae eius consectetur architecto cum iste, ipsam dolorem ipsum laudantium omnis itaque hic.
+        </p>
+        <label for="capitale">Quelle est la capitale de la France ?</label>
+        <input type="text" id="capitale" name="capitale" placeholder="capitale" />
+        <div class="reponse"></div>
+        <div class="resultat"></div>
+
+        <input type="submit" value="Valider" />
+    </div>
+
+    <p class="extensible">para extensible</p>
+    <p class="supprimer">Lorem ipsum dolor quidem? Aut.</p>
+
+    <a class="lien-supp" href="https://www.google.com/">lien vers google</a>
+
+    <div class="div-data" data-role="user" data-info='{"nom":"HIDRI", "prenom":"Ryan"}'>
+        div infos
+    </div>
+
+    <div class="div-eleve " style="border:solid 2px black  " data-role="eleve" data-info='{"note1":15,"note2":19}'>
+
+        <label for="yo">bouton changer paragraphe</label>
+        <button name="yo" class="btn-yo"> bouton a yo </button><br />
+
+        <label for="yoredpara">paragraphe rouge </label>
+        <button name="yoredpara " class="">Toggle class</button><br />
+
+        <p class="">coucou les coucous</p>
+
+        <div class="para-style">para non cliqué</div>
+    </div>
+   
+    <button class="btn-style">style du paragraphe</button> <br /><br /><br />
+
+    <div class="liens-each">
+        <a href="#">lien 1</a>
+        <a href="#">lien 2</a>
+        <a href="#">lien 3</a>
+        <a href="#">lien 4</a>
+        <a href="#">lien 5</a>
+
+
+        <button class="bc-btn">bc-btn</button><br /><br />
+
+        <button class="masquer-info-btn">masquer info</button>
+        <button class="afficher-info-btn">afficher info</button>
+        <button class="toggle-info-btn">toggle info</button>
+        <br /><br />
+
+        <a class="no-link" href="https://www.google.com/"> lien - pas de redirection</a> <br />
+        <br />
+
+        <a class="trigger-link" href="https://www.google.com/"> redirection artifielle</a>
+
+        <button class="trigger-btn">trigger bouton</button>
+
+        <br />
+        <br />
+        <form action="test.php" method="get">
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" /><br />
+            <label for="prenom">Prenom</label>
+            <input type="text" name="prenom" id="prenom" /><br />
+            <input type="submit" value="Valider" />
+
+            <div>
+                <input type="checkbox" id="scales" name="cases" checked />
+                <label for="scales">Scales</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="horns" name="cases" checked />
+                <label for="horns">Horns</label>
+            </div>
+        </form>
+        <br />
+        <br />
+
+        <button class="maj-form-btn ">maj champ form</button>
+
+        <br /><br /><br />
+        <button class="test-btn">bouton de test</button>
+
+        <ul>
+            <li><p>yi</p></li>
+            <li><p>yo</p></li>
+            <li><p>yo</p></li>
+        </ul>
+ 
+        <script src="js/jquery-3.6.1.min.js"></script>
+        <script src="js/main.js"></script>
+</body>
+
+</html>

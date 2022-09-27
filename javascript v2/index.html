@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Cours JS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <h1 class="titre">Cours JS</h1>
+
+
+  <div id="demo"></div>
+  <section class="container">
+    <form id="my-form" method="post">
+      <h1>Add User</h1>
+      <div class="msg"></div>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" />
+      </div>
+      <input class="btn" value="Submit" type="submit" />
+      <input id="couleur1" type="button" value="color red " onclick="couleurPv()">
+      <input id="couleur2" type="button" value="color green lemon  " onclick="couleurPn()">
+    </form>
+    <ul id="users"></ul>
+  </section>
+  <main>
+    <div id="affichage ">
+
+      <div style="display: block; border: 2px solid black; height: 150px; margin:10px;">
+        <label for="p1">Résultat de la fonction pour vérifier si une valeur se trouve dans un tableau</label>
+        <input id="trouve" type="button" value="chercher la valeur " onclick="trouve()">
+        <pre>[12, 2, 5, 9, 41, 56, 78, 36, 54]</pre>
+        <p id="p1">&nbsp;</p>
+
+      </div>
+
+      <div style="display: block; border: 2px solid black;">
+        <label for="P2">fonction pour chercher les villes avec plus de 1Mhab dans le tableau syuivant </label>
+        <input id="ville" type="button" value="chercher la ville" onclick="recherche()">
+        <pre>let villes = [
+          { id: 1, nom: "Paris", nbHabitants: 12365541 },
+          { id: 2, nom: "Lille", nbHabitants: 1051609 },
+          { id: 3, nom: "Toulon", nbHabitants: 575347 },
+          { id: 4, nom: "Marseille", nbHabitants: 1614501 },
+          { id: 5, nom: "Nice", nbHabitants: 942886 },
+          { id: 6, nom: "Cannes", nbHabitants: 74545 },
+          { id: 7, nom: "Toulouse", nbHabitants: 1035280 }
+      ];</pre>
+        <p id="p2">&nbsp;</p>
+      </div>
+
+      <div style="display: block; border: 2px solid black;">
+        <label for="p4">nombre au hasard dans un tableau </label>
+        <pre>[3, 4, 10, 16, 11, 12, 24, 85, 160, 220, 400, 12, 2, 5, 9, 41, 56, 78, 36, 54]; </pre>
+        <input id="hasard" type="button" value="nombre au hasard " onclick=" hasard()">
+
+        <p id="p4"></p>
+      </div>
+
+      <div style="display: block; border: 2px solid black;">
+        <label for="p3">chercher le plus grand et le plus petit chiffre avec la boucle for </label>
+        <pre>[3, 4, 10, 16, 11, 12, 24, 85, 160, 220, 400,20,78,906,123,126,672,1900]</pre>
+        <input id="fort" type="button" value="les extremes " onclick="maxiFor()">
+        <p id="p3">&nbsp;</p>
+      </div>
+
+      <div style="display: block; border: 2px solid black ; height: 300px; overflow: scroll;">
+        <label for="p5"> la voiture la plus puissante dans un tableau d'objet </label>
+        <input id="puissance" type="button" value="voiture la plus puissante " onclick="puissance(voitures)">
+        <pre>
+        let voitures = [
+        {
+            id: 1,
+            marquee: "Mercedes",
+            puissances: 10,
+        },
+        {
+            id: 2,
+            marquee: "Renault",
+            puissances: 8,
+        },
+        {
+            id: 3,
+            marquee: "BMW",
+            puissances: 12,
+        },
+        {
+            id: 4,
+            marquee: "Ferrari",
+            puissances: 30,
+        },
+        {
+            id: 5,
+            marquee: "Maserati",
+            puissances: 20,
+        },
+    ];
+      </pre>
+        <p id="p5"></p>
+      </div>
+
+      <div style="display: block; border: 2px solid black ; height: 300px; overflow: scroll;">
+
+        <fieldset>
+          <legend>nombre de roue par véhicule:</legend>
+
+          <div>
+            <input type="radio" id="moto" name="vehicule" value="moto" checked>
+            <label for="huey">2 roues </label>
+          </div>
+
+          <div>
+            <input type="radio" id="voiture" name="vehicule" value="voitue>">
+            <label for="dewey">4 roues </label>
+          </div>
+
+          <div>
+            <input type="radio" id="camion" name="vehicule" value="louie">
+            <label for="louie">6 roues</label>
+          </div>
+        </fieldset>
+      </div>
+
+    </div>
+  </main>
+
+
+  <nav>
+    <h2 style="text-align:center ;">les methodes</h2>
+    
+    <div style="display: block; border: 2px solid black ; height: 300px;">
+
+      <p class="">la methode de recherche find applique sur le tableau </p>
+      <input id="cherche" type="button" value="chercher le nombre  " onclick=" find()">
+
+      <pre>
+        const tableFind = [5, 12, 8, 130, 44];
+          const found = tableFind.find(element => element > 12);
+           p6.innerHtml = (`affichage de la valeur recherché : ${found}`)
+      </pre>
+
+      <div id="p6" class="p6">
+
+      </div>
+
+      <div id="P7">
+
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <script src="js/main2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+$("#save").click((e) => { // activation du bouton au click 
+  e.preventDefault()
+
+  id = Date.now()
+
+  console.log(id);
+  let objet = {
+    "nom": $("#nom").val(),
+    "prenom": $("#prenom").val(),
+    "id": id
+  }
+  if ($("#prenom").val().length === 0 ||$("#nom").val().length === 0 ) {
+  
+    $(".message").html("<span>Merci de remplir les champs</span>");
+    e.preventDefault();
+
+  }
+  else {
+    $.ajax({
+      url: "http://localhost:3000/contacts/",
+      type: "POST",
+      data: objet
+    })
+    
+    .done(function (response) {
+      $("save").click(function(){
+        $("input").trigger("select");
+    })
+
+
+  }
+
+
+)};
+
+
+
+<div class="modal-body">
+<form id="formulaire" metod="post"
+	<label for="nom">&nbsp;Nom &nbsp;&nbsp;<input type="text" name="nom" id="nom"></label><br />
+										<label for="prenom">Prénom<input type="text" name="prenom" id="prenom"></label>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary"
+												data-bs-dismiss="modal">Fermé</button>
+											<a type="button" id="save" class="btn btn-primary">Sauvegarder</a>
+										</div>
+										<div class="message fs-2 "></div>
+									</form>
+								</div>

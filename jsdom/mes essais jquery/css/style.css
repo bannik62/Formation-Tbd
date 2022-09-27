@@ -1,0 +1,33 @@
+body{
+        background-color: black;
+        color: rgb(6, 6, 6);
+}
+nav {
+
+        border: solid 2px rgb(247, 247, 247);
+}
+.container{
+        background: rgb(207, 246, 247);
+       
+}
+
+div {
+        border: solid 2px black;
+
+}
+span{
+            border: solid 2px black;
+            width:150px
+}
+p{
+        background-color: aliceblue;
+}
+.card{
+
+        background-color: aquamarine;
+
+
+}
+li {
+       bg 
+}
