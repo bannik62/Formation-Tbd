@@ -299,8 +299,8 @@ div:empty {
 }
 
 button {
-    --glow-color: rgb(217, 176, 255);
-    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --glow-color: rgb(219, 255, 176);
+    --glow-spread-color: rgba(197, 253, 147, 0.781);
     --enhanced-glow-color: rgb(231, 206, 255);
     --btn-color: rgb(100, 61, 136);
     border: .25em solid var(--glow-color);

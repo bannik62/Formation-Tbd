@@ -6,19 +6,16 @@
 
 let request = $.ajax({  
     type: "GET",
-    url: "https://api.m3o.com/v1/user/Create",
+     //url: "https://api.m3o.com/v1/user/Create",
     dataType: "json",
-    headers: {"Authorization":('Bearer NjcxYjk2NzUtZjE3Yy00OGJlLWFhY2UtNWQzMDUzNDJmZmYz' 
-
-
-    )}
+    // headers: {"Authorization":('Bearer NjcxYjk2NzUtZjE3Yy00OGJlLWFhY2UtNWQzMDUzNDJmZmYz' 
+    // )}
 });
     
 request.done(function (response) {
-    let contact = contacts.map( (response) => {
-        html =
+console.log();
       
-    };)})
+    });
     
 
 request.fail(function (http_error) {
