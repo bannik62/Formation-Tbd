@@ -9,16 +9,15 @@ $(document).on("click", ".supp", suppression)
 $(document).on("click", ".close", affichage)
 $(document).on("click", ".close", toast)
 $(document).on("click", "[data-source=tab-bord]", tbord)
-// $(document).on("click", "#ajouteMaj", maj)
-$(document).on("click", ".btn-close", closed)
-$(document).on("click", "#ajoute",ajoute)
+$(document).on("click", "#ajoute", ajoute)
+
 
 // les fonctions
 
 //compteur
 function compteur(incremente) {
-  for (let i = 0; i < incremente.length; i++ + 1) {
-    let total = [i];
+  for (let i = 0; i < incremente.length; i++ +1) {
+    let total = [i] ;
     return total
 
   }
@@ -29,7 +28,7 @@ function ajoute(e) { // activation du bouton au click
 
   console.log("bonjour"); //verification de la validité  de #save afin d envoyer la requete
   //  je cree une variable contenant un timestamp
-
+  
   console.log(id);
   // je crée une variable contenant l objet de la futur requete poste 
   let objet = {
@@ -49,11 +48,11 @@ function ajoute(e) { // activation du bouton au click
     $.ajax({
       url: "http://localhost:3000/contacts/",
       type: "POST",
-      data: objet,
+      data: objet
     })
 
       .done(function (response) {
-        //et nous l affichons avec message en resonce en paramete afin de  l afficher
+        //et nous l affichons avec message en resonce en paramete afin de (logiquement ) l afficher
         $(".message").html("<span>Votre ajout " + response + " a etait pris en compte veuillez femer la fenetre</span>");
 
       }
@@ -75,7 +74,7 @@ function affichage(e) {
   request.done(function (response) {
     let html = "";
     if (response.length === 0) {
-      html = `<h2 class="py-4 h1">Aucun contact n'a été trouvé.  </h2>`;
+      html = `<h2 class="py-4 h1 ">Aucun contact n'a été trouvé.  </h2>`;
     }
     else {
       html += `
@@ -99,7 +98,7 @@ function affichage(e) {
           <td>${contact.nom}</td>
           <td>${contact.prenom}</td>
           <td>
-            <button type="button" data-id="${contact.id}" data-bs-toggle="modal" data-bs-target="#Modal" class="btn btn-info text-white maj"><i class="fa-solid fa-pen-to-square"></i> Modifier</button>
+            <button type="button" data-id="${contact.id}" class="btn btn-info text-white maj"><i class="fa-solid fa-pen-to-square"></i> Modifier</button>
             <button type="button" data-id="${contact.id}" class="btn btn-danger supp"><i class="fa-solid fa-trash-can"></i> Supprimer</button>
           </td>
         </tr>`
@@ -124,19 +123,15 @@ function affichage(e) {
   });
 }
 // suppression
-
 function suppression(e) {
-
+  let id = $(e.target).data("id");
   let request = $.ajax({
     type: "DELETE",
     url: "http://localhost:3000/contacts/" + id,
   });
 
   request.done(function (response) {
-    
-    
     affichage(e)
-    
   });
   request.fail(function (http_error) {
     let server_msg = http_error.responseText;
@@ -147,11 +142,6 @@ function suppression(e) {
 }
 // je cree la fonction pour  l'affichage des toast 
 function toast(response) {
-  const userStr = (response);
-
- 
-  localStorage.setItem("response", userStr );
-  console.log(localStorage.getItem("reponse"));
 
   // je verifie les entrés
   if ($("#prenom").val().length === 0 || $("#nom").val().length === 0) {
@@ -203,13 +193,12 @@ function tbord() {
   });
   request.done(function (response) {
 
-    for (let i = 1; i < response.length; i++) {
-      let total = [i + 1];
-      // compteur(response)
-      $("section[data-cible=tab-bord ]").toggle().html("<h2>Tableau de bord </h2> <p> votre repertoire contient " + total + " contacts </p>")
-      //  }
-    }
-  })
+    for (let i = 1; i < response.length; i++ ) {
+               let total= [i +1];
+    // compteur(response)
+    $("section[data-cible=tab-bord ]").toggle().html("<h2>Tableau de bord </h2> <p> votre repertoire contient " + total  + " contacts </p>")
+    //  }
+  }})
   // )
   request.fail(function (http_error) {
     let server_msg = http_error.responseText;
@@ -219,51 +208,9 @@ function tbord() {
   });
 };
 
-/////////close toast 
-function closed() {
-  console.log("close");
-  let ferme = $(".message2")
-  ferme.html("")
 
-}
-//  ///mise a jour
-//   function maj(e) {
+////// modifier .....
 
-//   e.preventDefault();
-//   $(document).ready(function () {
-//     let objet = {
-//       "nom": $("#nomMaj").val(),
-//       "prenom": $("#prenom.maj").val(),
-//       "id": id,
-//     }
-//     $.ajax({
-//       //L'URL de la requête 
-//       url: "http://localhost:3000/contacts/" ,
-
-//       //La méthode d'envoi (type de requête)
-//       method: "PATCh",
-
-//       //Le format de réponse attendu
-//       dataType: "json",
-//       data: objet
-//     })
-//       //Ce code sera exécuté en cas de succès - La réponse du serveur est passée à done()
-//       /*On peut par exemple convertir cette réponse en chaine JSON et insérer
-//        * cette chaine dans un div id="res"*/
-//       .done(function (response) {
-        
-//         response.map((contact) => {
-//           contact.id
-//         })})
-//           //Ce code sera exécuté en cas d'échec - L'erreur est passée à fail()
-//           //On peut afficher les informations relatives à la requête et à l'erreur
-//           .fail(function (error) {
-//             alert("La requête s'est terminée en échec. Infos : " + JSON.stringify(error));
-//           })
-
-// })
-      
-//   };
 
 
 
