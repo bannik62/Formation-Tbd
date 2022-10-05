@@ -1,0 +1,18 @@
+Bootstrap
+CSS	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css //css
+JS	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js //js
+
+Jquery:
+
+https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js
+
+token github : const key = "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"
+token pole emploi : 
+Identifiant client
+PAR_recherchedemploi_3ccdde574e7ea04c707feb3c422d81d3f2607722a87f0d694334c07e9c9b997a
+
+Clé secrète
+48ff4423ad8723b26f28f2e0b7a3fe80e75147ffeaeda00440c0cad23bc8301e
+requete ajax 
+subbsité la realité par rentabilité
+

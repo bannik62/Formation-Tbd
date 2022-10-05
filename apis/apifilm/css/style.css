@@ -1,0 +1,42 @@
+body {
+
+    background-color: rgba(165, 42, 42, 0.484);
+    background: url("../img/6anj_ukos_200909-removebg-preview.png") center , url("../img/vf_jurassic_park_7587.webp")  ;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 200vh;
+
+}
+
+.card {
+    width: 90%;
+    background-color: darkgray;
+    border-radius: 17px;
+    background: #cb0e0e;
+    box-shadow: inset 20px 20px 60px #f39999,
+        inset -20px -20px 60px #eea6a6;
+}
+
+.fond {
+    /* top:10%; */
+    left:8%;
+    /* background-image: url(../img/banniere-cinema.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+p {
+    border: solid 2px black;
+    font-family: 'Limelight', cursive;
+    word-spacing: 5px;
+    font-size: 5rem;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 14px #bebebe,
+        -20px -20px 14px #ffffff;
+}
+
+#result {
+    width: 80%;
+}
