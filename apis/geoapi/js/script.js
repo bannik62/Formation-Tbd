@@ -3,7 +3,8 @@
 // 
 // let parsedString = JSON.parse(stringJson)
 $(document).ready(function () {
-    $(document).on('click', '#localisation', local)
+    $(document).on('click','#localisation',local)
+    $(document).on('click', '#affiche',affiche )
     let population1;
     let population2;
     let maPosition;
@@ -11,10 +12,11 @@ $(document).ready(function () {
     let longi;
     let marker
     let map
+    let bindPopup
 
     $("#zipcode").on('blur', function () {
         const apiURL = "https://geo.api.gouv.fr/communes?nom=";
-        const format = "&format=json";
+        const format = "&boost=population&limit=5&format=json";
         let ville = $("#ville")
         let code = $(this).val();
         let url = apiURL + code + format;
@@ -96,47 +98,61 @@ $(document).ready(function () {
 
     });
 
-
-
-
     function local() {
-
-        // let carte = $("#carte");
-        // let info = $("#info");
-
-
-
         console.log("bonjour");
 
         navigator.geolocation.getCurrentPosition(function (position) {
-            console.table(position);
+            console.table(position); // console.log(maPosition.coords);
+           
             maPosition = position;
-            // console.log(maPosition.coords);
+
             $(".info").html(`<p class="text-center">Mes coordonnés :latitude ${maPosition.coords.latitude} longitude ${maPosition.coords.longitude} </p>`)
 
-            return lati = maPosition.coords.latitude, longi = maPosition.coords.longitude;
+            lati = maPosition.coords.latitude, longi = maPosition.coords.longitude;
+
+            // console.log(marker);
+            map = L.map('map').setView([lati, longi], 13);
+
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: ' <a  class="mb-5" href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+
+            marker = L.marker([lati, longi]).addTo(map)
+           
+            map.panTo(new L.LatLng(lati, longi))
+           
+            L.marker([lati, longi]).addTo(map)
+                .bindPopup('vous etes ici .')
+                .openPopup();
+
+            console.log(longi, lati);
 
         })
 
-        // console.log(marker);
-        map = L.map('map').setView([51.505, -0.09], 13);
-
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: ' <a  class="mb-5" href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-        var marker = L.marker([lati, longi]).addTo(map)
-
-        L.marker([51.505, -0.09]).addTo(map)
-            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-            .openPopup();
-
-        console.log(longi);
-
-
-
     }
 
-})
+    function affiche(e) {
+        e.preventDefault();
+        console.log("bonjour");
+        const url = "http://localhost:3000/villes";
+
+        fetch(url, { method: 'get' }).then(response => response.json()).then(function (tab) {
+            if (tab.lenght) {
+                console.log(tab);
+                
+            }
+        }
+
+        
+    }
+
+   
+      
+      
+    })
+
+  
 
         // const url = 'https://geo.api.gouv.fr/communes?';
         // const geo = '=code,nom,codesPostaux,surface,population,centre,contour';

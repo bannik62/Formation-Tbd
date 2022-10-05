@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
-    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
-    crossorigin=""/>
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css ">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -21,21 +20,21 @@
         <label for="zipcode">Si vous ne conaissez pas le code postal de la ville renseignez vous ici </label>
         <input type="text" id="zipcode" name="zipcode" class="form-control " placeholder="cherchez une ville ">
 
-        <label for="ville">commune et communes asossocié avec leurs codes postaux </label>
+        <label for="ville">commune et nom decommunes asossocié avec leurs codes postaux </label>
         <select type="text" id="ville" name="ville" class="form-control" placeholder="">
         </select>
     </form>
     <div class="affichage">
 
     </div>
-    <p class="text text-center">population</p>
+    <p class="text text-center mt-5">trouver la population d'une ville </p>
     <label for="ville1pop">savoir la population d'une ville ? (entrez le code postal)</label>
     <input type="text" id="ville1pop" name="ville1pop" class="form-control">
-    <input type="button" class="btn bg-light" value="chercher" id="btnpopu1">
+    <input type="button" class="btn bg-light text-center" value="chercher" id="btnpopu1">
     <br />
     <label for="ville2pop">savoir la population d'une ville ?</label>
     <input type="text" id="ville2pop" name="ville2pop" class="form-control">
-    <input type="button" class="btn bg-light" value="chercher" id="btnpopu2">
+    <input type="button" class="btn bg-light text-center" value="chercher" id="btnpopu2">
     <div class="d-flex justify-content-between">
         <span class="pop1">
         </span>
@@ -44,29 +43,36 @@
 
     </div>
     <div class="d-flex  justify-content-center">
-                <span >
-                    <p class="total">difference de population </p>
+        <span>
+            <p class="total mt-5 ">difference de population </p>
         </span>
     </div>
-<h2 class="text-center"> geolocalisation </h2>
+    <h2 class="text-center"> geolocalisation </h2>
 
-<div class="info"></div>
+    <div class="info"></div>
 
-    <div class="localistion d-flex flex-column ">
-        
-      
-        <label for="localisation">&nbsp ou suis je ?</label>
-        <input type="button" id="localisation" value="&nbsp ou suis-je ?" name="localisation" class=" bg-light">
-         <br/>
-         <br/>
-        <!-- <label for="carte"> &nbsp la carte &nbsp.&nbsp</label>
-        <input type="button"  name="carte" class=" bg-light" value="sur la carte ?" id="carte"> -->
-        <div class="map" id="map"> </div>
-    </div>    
-                              <!--les scripts externe  -->
+    <div class="localistion d-flex flex-column justify-content-center align-items-center">
+        <label for="localisation">&nbsp Géolocalisation?</label>
+        <input type="button" id="localisation" value="&nbsp ou suis-je ?" name="localisation" class=" bg-light ">
+        <br />
+        <br />
+        <div class="map m-5 " id="map"> </div>
+    </div>
+    <div>
+        <input type="button" id="affiche" value="affichage"> 
+       
+        <div id="affichage">
+
+        </div>
+    </div>
+    <div class="footer bg-light">
+        <p>footer</p>
+    </div>
+
+
+    <!--les scripts externe  -->
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
-     crossorigin=""></script>
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="js/script.js"> </script>
 </body>

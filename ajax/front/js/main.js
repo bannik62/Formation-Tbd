@@ -27,9 +27,8 @@ function ajoute(e) { // activation du bouton au click
   e.preventDefault()
 
   console.log("bonjour"); //verification de la validité  de #save afin d envoyer la requete
-  //  je cree une variable contenant un timestamp
-  
-  console.log(id);
+  //  je log  une variable contenant un timestamp
+   console.log(id);
   // je crée une variable contenant l objet de la futur requete poste 
   let objet = {
     "nom": $("#nom").val(),
