@@ -18,10 +18,10 @@
     <p class="titre text-center">villes et régions de france </p>
     <form action="post">
         <label for="zipcode">Si vous ne conaissez pas le code postal de la ville renseignez vous ici </label>
-        <input type="text" id="zipcode" name="zipcode" class="form-control " placeholder="cherchez une ville ">
+        <input type="text" id="zipcode" name="zipcode" class="form-control " placeholder="cherchez une ville " required>
 
-        <label for="ville">commune et nom decommunes asossocié avec leurs codes postaux </label>
-        <select type="text" id="ville" name="ville" class="form-control" placeholder="">
+        <label for="ville">résultat des communes et nom decommunes asossocié avec leurs codes postaux </label>
+        <select type="text" id="ville" name="ville" class="form-control" >
         </select>
     </form>
     <div class="affichage">
@@ -58,23 +58,54 @@
         <br />
         <div class="map m-5 " id="map"> </div>
     </div>
-    <div>
-        <input type="button" id="affiche" value="affichage"> 
+    <div >
+   <label for="affiche">enregisté les villes trouver</label>
+        <input type="button" name="affiche" id="affiche" value="affichage"> 
+     
+        <label for="pays">pays</label>
+        <input type="text" name="pays" id="pays">
+      
+        <label for="ville">ville </label>
+        <input type="text" name="ville" id="ville">
+      
+        <label for="codepostal">code postal</label>
+        <input type="text" name="codepostal" id="codepostal">
+      
+        <label for="visted">visité</label>
+        <input type="text" name="visted" id="visited">
+        
+        <input type="button" name="maj" id="maj" value="ajouté">
+        <input type="button" name="supression" id="supression" value="supprime">
        
-        <div id="affichage">
+        <div id="affichage" class="d-flex justify-content-between align-content-around pb-5 flex-wrap m-5 p-5 ">
+            
 
         </div>
+        <div class="info2"></div>
     </div>
+   
+   
+   
+   
+   
     <div class="footer bg-light">
         <p>footer</p>
     </div>
 
 
+ 
+ 
+ 
+ 
+ 
     <!--les scripts externe  -->
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
         integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="js/script.js"> </script>
+
+
+
 </body>
 
 </html>

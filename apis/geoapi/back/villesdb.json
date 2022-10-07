@@ -1,29 +1,19 @@
 {
   "villes": [
     {
-     "pays" :france,
-     "codepostal": "62100",
-     "ville": "calais",
-     },
-    
-    {
-        "pays" :"france"
-       "codepostal": "59000",
-       "ville": "lille",
+      "id": "1665124731145",
+      "pays": "france",
+      "ville": "",
+      "code postal": "62100",
+      "visité": "false"
     },
-   
-   
     {
-       "pays" :"france"
-      "ville": "coquelles",
-      "codepostal": "62231"
-    },
-   
-    {
-      "pays" :"france"
-      "ville": "marck",
-      "codepostal": "62730",
+      "id": "1665124780795",
+      "pays": "france",
+      "ville": "",
+      "code postal": "62100",
+      "visité": "false"
     }
   ],
-  "clients": []
+  "clients": {}
 }
