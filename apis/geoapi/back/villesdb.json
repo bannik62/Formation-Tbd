@@ -1,18 +1,32 @@
 {
   "villes": [
     {
-      "id": "1665124731145",
+      "id": "1665352217905",
       "pays": "france",
-      "ville": "",
-      "code postal": "62100",
-      "visité": "false"
+      "ville": "calais",
+      "codepostal": "62100",
+      "visite": "false"
     },
     {
-      "id": "1665124780795",
+      "id": "1665367233745",
       "pays": "france",
-      "ville": "",
-      "code postal": "62100",
-      "visité": "false"
+      "ville": "roubais",
+      "codepostal": "59200",
+      "visite": "false"
+    },
+    {
+      "id": "1665371865967",
+      "pays": "FRANCE",
+      "ville": "nantes",
+      "codepostal": "44000",
+      "visite": "false"
+    },
+    {
+      "id": "1665431689458",
+      "pays": "france",
+      "ville": "bordeaux",
+      "codepostal": "33200",
+      "visite": "false"
     }
   ],
   "clients": {}

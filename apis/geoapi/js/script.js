@@ -3,7 +3,9 @@
 // 
 // let parsedString = JSON.parse(stringJson)
 $(document).ready(function () {
-    let id = Date.now();
+console.log("hello world");
+
+    
     $(document).on('click', '#localisation', local)
     $(document).on('click', '#affiche', affichage)
     $(document).on('click', '#maj',ajoute)
@@ -16,10 +18,6 @@ $(document).ready(function () {
     let marker
     let map
     let html
-    let pays =$("#pays").val()
-    let ville = $("#ville").val()
-    let code =$("#codepostal").val()
-    let visited =$("#visited").val()
 
 
     $("#zipcode").on('blur', function (e) {
@@ -30,20 +28,28 @@ $(document).ready(function () {
         let code = $(this).val();
         let url = apiURL + code + format;
 
+
         ville.html("")
         console.log(url);
-
+//je fetch 
         fetch(url, { method: 'get' }).then(response => response.json()).then(results1 => {
-
+//if si il la reponse existe 
             if (results1.length) {
                 console.log(results1);
                 results1.forEach(function (key) {
                     console.log(key);
 
-                    $('.affichage').text('la ville de :' + key.nom + ' possede une poupulation de ' + key.population + ' habitant');
+                    $('.affichage').text('la ville de :' + key.nom + ' posséde une poupulation de ' + key.population + ' habitant');
 
                     $('#ville').append('<option value=' + key.nom + '> regions de :' + key.nom + ' ' + key.codesPostaux + ' <option/>')
-
+                   
+                    $(".valid").html(
+                   `<div class="">
+                    <div class="card-header rounded containerspecial   text-center m-3 ">
+                          <p class=" text-center ">Nous vous avons trouver une correspondance</p>
+                 </div>
+              
+                    </div>`) 
                     // console.log(population1);
                 })
 
@@ -52,7 +58,7 @@ $(document).ready(function () {
     })
     //:::::::::::::::::::::::::::::::::::::Population::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     $(document).on('click', '#btnpopu1', function () {
-
+console.log("cc");
         const apiURLP = 'https://geo.api.gouv.fr/communes?codePostal=';
         const formatP = "&field&format=json";
         let codeP = $('#ville1pop').val();
@@ -63,10 +69,10 @@ $(document).ready(function () {
         fetch(url, { method: 'get' }).then(response => response.json()).then(function (results) {
             if (results.length) {
                 results.forEach(function (value) {
-                    // console.log(value.population);
+                    console.log(value.nom);
                     population1 = value.population;
                     console.log(population1);
-                    $(".pop1").html("<p> la ville de " + value.nom + " possede une population de " + population1 + " citoyens<p/>")
+                    $(".pop1").html(`<p class="m-5 p-2 bg-info containerspecial text-center" > la ville de ${value.nom } possede une population de ${population1} citoyens<p/>`)
                     return population1
                 })
 
@@ -79,7 +85,7 @@ $(document).ready(function () {
     //------------------------------------------------------------------------------------------------------
 
     $(document).on('click', '#btnpopu2', function () {
-
+console.log("bonjour");
         const apiURLP = 'https://geo.api.gouv.fr/communes?codePostal=';
         const formatP = "&field&format=json";
         let codeP = $('#ville2pop').val();
@@ -89,10 +95,10 @@ $(document).ready(function () {
         fetch(url, { method: 'get' }).then(response => response.json()).then(function (results) {
             if (results.length) {
                 results.forEach(function (value) {
-                    // console.log(value.population);
+                    console.log(value.population);
                     population2 = value.population;
                     console.log(population2);
-                    $(".pop2").html("<p> la ville de " + value.nom + " possede une population de " + population2 + " citoyens<p/>")
+                    $(".pop2").html(`<p class="m-5 p-2 bg-info containerspecial text-center"> la ville de ${value.nom}  posséde une population de ${population2}  citoyens<p/>`)
                     return population2
 
                 });
@@ -100,28 +106,28 @@ $(document).ready(function () {
             console.log(population2, population1);
             let total = (population2 - population1);
             console.log(total);
-            $(".total").text("la difference de population et de : " + total + " citoyens");
+            $(".total").html(`<p class="p-3 bg-success rounded-2 containerspecial text-center">la différence de population et de : ${total} citoyens</p>`);
         });
 
     });
 
     function local() {
-        console.log("bonjour");
-
+        
+         // methode navigateur                            
         navigator.geolocation.getCurrentPosition(function (position) {
             console.table(position); // console.log(maPosition.coords);
 
-            maPosition = position;
-
-            $(".info").html(`<p class="text-center">Mes coordonnés :latitude ${maPosition.coords.latitude} longitude ${maPosition.coords.longitude} </p>`)
+            maPosition = position; 
+         // recuperation coordonne dans l objet position issus de la methode  navigator.geolocation.getCurrentPosition
+            $(".info").html(`<p class="text-center m-4">Mes coordonnés :latitude ${maPosition.coords.latitude} <br/> longitude ${maPosition.coords.longitude} </p>`)
 
             lati = maPosition.coords.latitude, longi = maPosition.coords.longitude;
 
-            // console.log(marker);
+            // console.log(marker);latitude auqel aparaitrait la carte  si elle etait la des le debut 
             map = L.map('map').setView([48.52, 2.19], 13);
-
+         // voir documentation 
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: ' <a  class="mb-5" href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                attribution: ' <a class="mb-5" href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
 
 
@@ -130,7 +136,7 @@ $(document).ready(function () {
             map.panTo(new L.LatLng(lati, longi))
 
             L.marker([lati, longi]).addTo(map)
-                .bindPopup('vous etes ici .')
+                .bindPopup('vous etes ici.')
                 .openPopup();
 
             console.log(longi, lati);
@@ -152,8 +158,14 @@ function compteur(incremente) {
   // ajouts
   function ajoute(e) { // activation du bouton au click 
     e.preventDefault
+    let pays = $("#pays").val()
+    let ville = $("#villea").val()
+    let code = $("#codepostal").val()
+    let visited =$("#visited").val()
+
  console.log("bonjour"); //verification de la validité  de #save afin d envoyer la requete
     //  je log  une variable contenant un timestamp
+    let id = Date.now();
      console.log(id);
     // je crée une variable contenant l objet de la futur requete poste 
 
@@ -161,11 +173,11 @@ function compteur(incremente) {
         "id": id,
       "pays":pays,
       "ville": ville,
-      "code postal":code,
-      "visité":visited
+      "codepostal":code,
+      "visite":visited
       };
    //si ce n 'est pas le cas  nous créons la requete ajax 
-     
+      console.log(objet);
        $.ajax({
         url: "http://localhost:3000/villes/",
         type: "POST",
@@ -175,7 +187,7 @@ function compteur(incremente) {
         .done(function (response) {
             console.log(objet);
           //et nous l affichons avec message en resonce en paramete afin de (logiquement ) l afficher
-          $(".info2").html("<span>Votre ajout " + response + " a etait pris en compte veuillez femer la fenetre</span>");
+          // $(".info2").html("<span>Votre ajout " + response.ville + " a etait pris en compte veuillez femer la fenetre</span>");
             affichage(e)
         }
   
@@ -187,6 +199,7 @@ function compteur(incremente) {
   //affichage
   function affichage(e) {
     e.preventDefault();
+    
     let request = $.ajax({
       type: "GET",
       url: "http://localhost:3000/villes",
@@ -200,15 +213,17 @@ function compteur(incremente) {
       }
       else {
         html += `
-      <h2 class="py-4 h1 ">Liste des villes </h2>
-      <table class="table table-striped ">
+              <div class="containerspecial my-5 me-5  p-4 d-flex flex-wrap container justify-content-between align-content-between ">
+
+      <h2 class="py-4 h1 text-center text-info "><strong>Liste des villes</strong> </h2>
+      <table class="table table-striped table-info table-hover ">
         <thead>
           <tr>
             <th scope="col">#ID</th>
             <th scope="col">pays</th>
             <th scope="col">ville</th>
             <th scope="col">code postal</th>
-             <th scope="col">enregistré</th>
+             <th scope="col" colspan="2">visité</th>
             </tr>
         </thead>
         <tbody>`;
@@ -218,16 +233,15 @@ function compteur(incremente) {
           html += `
           <tr>
             <th scope="row">${villes.id}</th>
-           
             <td>${villes.pays}</td>
             <td>${villes.ville}</td>
             <td>${villes.codepostal}</td>
-               <td>${villes.visited}</td>
+            <td>${villes.visite}</td>
 
            
             <td>
-              <button type="button" data-id="${villes.id}" class="btn btn-info text-white maj"><i class="fa-solid fa-pen-to-square"></i> Modifier</button>
-              <button type="button" data-id="${villes.id}" class="btn btn-danger supp"><i class="fa-solid fa-trash-can"></i> Supprimer</button>
+              <button type="button" data-id="${villes.id}" class="btn btn-info text-white maj"><i class="fa-solid fa-pen-to-square"></i>Modifier</button>
+              <button type="button" data-id="${villes.id}" class="btn btn-danger supp"><i class="fa-solid fa-trash-can"></i>Supprimer</button>
             </td>
           </tr>`
         }
@@ -235,10 +249,11 @@ function compteur(incremente) {
   
         html += `</tbody>
               </table>
+              </div>
       `;
       }
   
-  console.log(html);
+       console.log(html);
       $("#affichage").html(html);
   
   
@@ -268,8 +283,6 @@ function compteur(incremente) {
       alert("Erreur " + code + " (" + code_label + ") : " + server_msg);
     });
   }
-
-
 
 
   

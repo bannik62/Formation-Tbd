@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+</head>
+
+<body>
+
+    <p>(^0[67][\d]{8}$|^0[67]( \d{2}){4}$) (non factorisé ) <br>
+        je commence par un 0 avec ^ ensuite un intervalle entre [6et 7 ]suivi d un intervalle entre [0et9] *{8} ou | la
+        meme chose avec espace
+        <br>quantificateurs:
+        <br>
+        <br>
+        <br>
+        + => minimum 1 fois sans limite maximum <br>
+        * => peu importe le nombre de fois, 0 compris <br>
+        ? => entre 0 et une fois maximum <br>
+        {n} (n doit être positif) => se répète exactement n fois (exemple {3} => forcément 3 fois) <br>
+        {n, m} (n et m doivent être positifs) => se répète entre n et m fois exactement (exemple {2, 4} => entre 2 et 4
+        fois) <br>
+        / caractere d échappement
+        </div>
+        {n,} (n doit être positif) => se répète un minimum de n fois, sans limite (exemple {2, } => supérieur ou égal à
+        2) <br>
+
+        <br>
+        du coup par exemple: 0? => pas de 0 ou une seule fois
+    </p>
+
+    <a href="https://www.php.net/manual/fr/regexp.reference.escape.php"> les caractere d espacement </a><br><br><br><br>
+    <h2>essais tuto regex :</h2> 
+    <p>
+    <br>
+    <br>
+    <br>
+    cette expression permet de couvrir les 2 occurences (
+    <br>
+    <br>
+    wind|kind)surf
+    windsurf kindsurf
+     <br><br>
+
+    si nous ajoutons le mot surf il ne sera pas reconnu sauf si on lui ajoute un point d'interogation qui egale zero ou une occurence  <br>
+    qui indique que l 'on peut detecter les deux ou aucun et donc surf et pris en compte en tant que mots
+    <br>
+    <br>
+    (wind|kind)?surf
+    <br>
+    windsurf kindsurf surf
+    exemple regex : <br><br>
+</p>
+
+
+
+
+
+
+    valider un num français au format international au format +33(0)612345678
+    <br>
+    le num peut etre fixe ou mobile, avec ou sans espaces
+    <br>
+    &nbsp+33(0)612345678&nbsp= <br>
+    &nbsp^\+.*[33]{2}\(\d\)[0-9]{9}
+    <br>
+    <br>
+    meme ex que le précedent (fixe ou mobile, avec ou sans espaces) <br>
+    mais au format +33(0)612345678 ou 0033(0)612345678
+    <br>
+    &nbsp0033(0)612345678 +33(0)612345678&nbsp= </br>
+    &nbsp^\+.*[33]{2}\(\d\)[0-9]{9}|^.* [0]{2}[3]{2}.*\(0\).*[67][\d]{8} 
+    <br>
+    ou 
+    <br>
+(00|\+33) <br>
+<br>
+/^\+33\(0\)[1-9]( ?[0-9]{2}){4}$/
+<br><br><br>
+les cas possibles <br>
+// 01-09 xxx
+// 10-89 xxx
+// 90-95 xxx
+<br><br>
+/^(0[1-9]|[1-8]\d|9[0-5])\d{3}$/
+<br><br><br>
+valider la regex de la reference d’une salle dans un batiment au format bloc-étage-salle comme A-01-S10, sachant que : <br>
+- le batiment contient 4 blocs, le 1er commence par A <br>
+- chaque bloc contient 8 étages <br>
+- chaque étage contient 10 salles <br>
+<br>
+<br>
+/^[A-D]\-0[0-8]\-S(0[1-9]|10)$/
+
+
+
+</body>
+
+</html>
